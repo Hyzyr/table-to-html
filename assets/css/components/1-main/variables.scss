@@ -2,11 +2,20 @@ $main: #f3af44;
 $main-light: #f2b128;
 $main-dark: #da9b39;
 $black: #111;
-$black-1: #131313;
-$black-main: #674713;
+$black-bg: #11011e;
 $white: #fff;
-$white-bg: #f2eada;
-$gray: #666;
-$gray-0: #888;
-$gray-1: #ddd3c5;
-$gray-2: #d7cebd;
+$white-1: #eaeaea;
+$white-2: #e0e0e0;
+$gray: #808080;
+$gray-1: #c6c6c6;
+$magenta: #8427f3;
+$color-1: #0056fe;
+$color-2: #9644ff;
+$color-3: #00c4f4;
+$color-4: #f72585;
+$color-5: #e58906;
+
+$gradient-1: linear-gradient(45deg, $color-1, $color-2);
+$gradient-2: linear-gradient(45deg, $color-4, $color-5);
+
+$font-secondary: "Rubik", sans-serif;

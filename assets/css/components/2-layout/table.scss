@@ -1,0 +1,202 @@
+.comparisonTable {
+  padding: 80px 0;
+  & > * {
+    box-sizing: border-box;
+  }
+
+  &__inner {
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      border: 0;
+      width: 100%;
+
+      td,
+      th {
+        position: relative;
+        font-family: $font-secondary;
+        padding: 5px;
+        z-index: 0;
+      }
+      td {
+        width: 30%;
+        &:nth-child(n + 1) {
+          .comparisonTable__box {
+            &::before {
+              border-radius: 0;
+              top: 0;
+              height: 100%;
+            }
+          }
+        }
+      }
+      th {
+        ._header {
+          text-align: left;
+        }
+      }
+
+      tr:first-child {
+        td {
+          &:nth-child(n + 1) {
+            .comparisonTable__box {
+              &::before {
+                top: 5px;
+                height: calc(100% - 5px);
+                border-radius: 15px 15px 0 0;
+              }
+            }
+          }
+        }
+      }
+      tr:last-child {
+        td {
+          &:nth-child(n + 1) {
+            .comparisonTable__box {
+              &::before {
+                height: calc(100% - 5px);
+                border-radius: 0 0 15px 15px;
+              }
+            }
+          }
+        }
+      }
+      tr:nth-child(odd) {
+        .comparisonTable__box {
+          &::before {
+            background: $white-2;
+          }
+          &._header {
+            &:before {
+              background: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .comparisonTable__seperator {
+    padding: 5px 10px;
+    width: 100%;
+    box-sizing: border-box;
+
+    //font
+    color: $gray;
+    font-size: 22px;
+    color: $black;
+    text-align: left;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      box-sizing: border-box;
+      background: $white;
+      border-radius: 15px;
+      z-index: -1;
+    }
+  }
+  .comparisonTable__header {
+    display: flex;
+    flex-direction: column;
+    color: $gray;
+    padding: 40px 10px 10px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    //font
+    color: $black;
+    text-align: center;
+
+    strong {
+      font-size: 26px;
+      padding: 0.5em 0;
+    }
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: calc(100% - 10px);
+      height: 30px;
+      padding: 5px;
+      box-sizing: border-box;
+      border-radius: 20px;
+      color: $black;
+      background: $white-1;
+    }
+    small {
+      opacity: 0.8;
+      font-size: 12px;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      box-sizing: border-box;
+      background: $white;
+      border-radius: 15px;
+      z-index: -1;
+    }
+    &._primary {
+      color: $white;
+      strong {
+        font-size: 28px;
+      }
+
+      &:before {
+        background: $color-1;
+        background: $gradient-1;
+      }
+    }
+    &._secondary {
+      color: $white;
+      strong {
+        font-size: 28px;
+      }
+
+      &:before {
+        background: $color-4;
+        background: $gradient-2;
+      }
+    }
+  }
+  .comparisonTable__box {
+    color: $gray;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    //font
+    font-size: 16px;
+    text-align: center;
+
+    &._header {
+      font-weight: 700;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      box-sizing: border-box;
+
+      background: $white;
+      border-radius: 15px;
+      z-index: -1;
+    }
+  }
+}
