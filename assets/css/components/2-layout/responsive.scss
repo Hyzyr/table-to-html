@@ -16,15 +16,15 @@
   }
   @include comparisonTable-940;
 }
-@media (max-width: 600px) {
+@media (max-width: 740px) {
   .autoContainer {
     padding: 0 15px;
   }
-  @include comparisonTable-600;
+  @include comparisonTable-740;
 }
-@media (max-width: 500px) {
+@media (max-width: 540px) {
   .autoContainer {
     padding: 0 10px;
   }
-  @include comparisonTable-600;
+  @include comparisonTable-540;
 }
