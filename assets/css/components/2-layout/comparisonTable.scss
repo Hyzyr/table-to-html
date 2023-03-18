@@ -77,7 +77,7 @@
       }
     }
   }
-  .comparisonTable__seperator {
+  &__seperator {
     padding: 5px 10px;
     width: 100%;
     box-sizing: border-box;
@@ -102,7 +102,7 @@
       z-index: -1;
     }
   }
-  .comparisonTable__header {
+  &__header {
     display: flex;
     flex-direction: column;
     color: $gray;
@@ -130,7 +130,7 @@
       box-sizing: border-box;
       border-radius: 20px;
       color: $black;
-      background: $white-1;
+      background: $white;
     }
     small {
       opacity: 0.8;
@@ -168,12 +168,12 @@
       }
 
       &:before {
-        background: $color-4;
+        background: $color-5;
         background: $gradient-2;
       }
     }
   }
-  .comparisonTable__box {
+  &__box {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,6 +203,7 @@
       border-radius: 50%;
       background: $gray-1;
       margin-right: 1em;
+      flex-shrink: 0;
 
       svg {
         width: 0.8em;
@@ -227,7 +228,7 @@
       color: $color-1;
     }
     &._secondary {
-      color: $color-4;
+      color: $color-5;
     }
   }
 
@@ -237,7 +238,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-
+    z-index: -1;
     span {
       position: absolute;
       width: 0;
@@ -260,6 +261,132 @@
         right: 40%;
         opacity: 0.5;
         transform: scale(3);
+      }
+    }
+  }
+}
+
+@mixin comparisonTable-1025 {
+  .comparisonTable {
+    &__header {
+      strong {
+        font-size: 20px;
+      }
+    }
+    &__seperator {
+      font-size: 20px;
+    }
+  }
+}
+@mixin comparisonTable-940 {
+  .comparisonTable {
+    &__header {
+      padding: 30px 10px 10px 10px;
+      strong {
+        font-size: 20px !important;
+      }
+      span {
+        font-size: 14px;
+      }
+    }
+    &__seperator {
+      font-size: 18px;
+    }
+    &__box {
+      font-size: 14px;
+    }
+  }
+}
+@mixin comparisonTable-600 {
+  .comparisonTable {
+    &__header {
+      span {
+        font-size: 12px;
+      }
+    }
+    &__inner {
+      table {
+        border-radius: 20px;
+        padding-bottom: 20px;
+        background: rgba($white-1, 0.9);
+
+        td,
+        th {
+          width: 50%;
+          box-sizing: border-box;
+          padding: 5px 3px;
+          box-sizing: border-box;
+        }
+        tr {
+          display: flex;
+          flex-wrap: wrap;
+
+          td:first-child,
+          th:first-child {
+            width: 100%;
+          }
+
+          td:nth-child(2) {
+            background: mix($white, $color-1, 95%);
+            border-right: 1px solid rgba($gray-1, 0.5);
+          }
+          td:nth-child(3) {
+            background: mix($white, $color-5, 95%);
+          }
+        }
+        thead {
+          th:first-child {
+            .comparisonTable__header {
+              padding: 20px 0;
+              &:before {
+                display: none;
+              }
+              small {
+                display: none;
+              }
+            }
+          }
+        }
+        tbody {
+          position: relative;
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            background: $white;
+            border-radius: 20px;
+            z-index: -1;
+          }
+          tr:last-child {
+            border-radius: 0 0 20px 20px;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+    &__box {
+      &:before {
+        display: none;
+      }
+      &._header {
+        padding: 0 5px;
+        color: $gray;
+        ._ico {
+          display: none;
+        }
+        &::before {
+          display: none;
+        }
+      }
+    }
+    &__seperator {
+      &:before {
+        display: none;
       }
     }
   }

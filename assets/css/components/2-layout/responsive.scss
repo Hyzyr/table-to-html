@@ -1,0 +1,24 @@
+@media (max-width: 1025px) {
+  .autoContainer {
+    padding: 0 40px;
+  }
+  @include comparisonTable-1025;
+}
+@media (max-width: 940px) {
+  .autoContainer {
+    padding: 0 25px;
+  }
+  @include comparisonTable-940;
+}
+@media (max-width: 600px) {
+  .autoContainer {
+    padding: 0 15px;
+  }
+  @include comparisonTable-600;
+}
+@media (max-width: 500px) {
+  .autoContainer {
+    padding: 0 10px;
+  }
+  @include comparisonTable-600;
+}
