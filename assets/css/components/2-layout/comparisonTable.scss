@@ -149,7 +149,7 @@
     box-sizing: border-box;
 
     //font
-    color: $white !important;
+    color: $white;
     font-weight: 500;
     font-size: 18px;
 
@@ -219,12 +219,10 @@
       z-index: -1;
     }
     &._success {
-      color: $green;
       padding: 5px 1em;
     }
     &._warning {
       padding: 5px 1em;
-      color: mix($black, $color-4, 20%);
     }
   }
 
@@ -239,8 +237,10 @@
       position: absolute;
       width: 1px;
       height: 1px;
+      border: 0;
       border-radius: 50%;
       box-shadow: 0 0 400px 120px $magenta;
+      -webkit-appearance: none;
 
       &:nth-child(1) {
         top: 50%;
@@ -330,7 +330,7 @@
           }
 
           th:nth-child(1) {
-            background: rgba($white, 0.06);
+            background: rgba($magenta, 0.25);
           }
           td:nth-child(2) {
             // background: $white;
@@ -404,10 +404,10 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 5px;
+        padding: 8px 5px;
 
         //font
-        color: $black-1;
+        color: $white;
         font-weight: 500;
         font-size: 18px;
 
@@ -434,9 +434,6 @@
   .comparisonTable {
     &__box {
       font-size: 14px;
-      &._header {
-        font-size: 16px;
-      }
     }
   }
 }
