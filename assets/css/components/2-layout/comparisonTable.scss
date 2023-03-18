@@ -308,7 +308,7 @@
       table {
         border-radius: 20px;
         padding-bottom: 20px;
-        background: rgba($white-1, 0.9);
+        background: rgba($white-1, 0.8);
 
         td,
         th {
@@ -338,6 +338,9 @@
           th:first-child {
             .comparisonTable__header {
               padding: 20px 0;
+              strong {
+                font-size: 24px !important;
+              }
               &:before {
                 display: none;
               }
@@ -382,6 +385,12 @@
         &::before {
           display: none;
         }
+      }
+    }
+    &__header {
+      padding: 30px 10px;
+      &:before {
+        height: calc(100% - 25px);
       }
     }
     &__seperator {

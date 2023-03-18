@@ -321,7 +321,7 @@ body {
   .comparisonTable__inner table {
     border-radius: 20px;
     padding-bottom: 20px;
-    background: rgba(234, 234, 234, 0.9);
+    background: rgba(234, 234, 234, 0.8);
   }
   .comparisonTable__inner table td,
 .comparisonTable__inner table th {
@@ -351,6 +351,9 @@ body {
   }
   .comparisonTable__inner table thead th:first-child .comparisonTable__header {
     padding: 20px 0;
+  }
+  .comparisonTable__inner table thead th:first-child .comparisonTable__header strong {
+    font-size: 24px !important;
   }
   .comparisonTable__inner table thead th:first-child .comparisonTable__header:before {
     display: none;
@@ -391,6 +394,12 @@ body {
   }
   .comparisonTable__box._header::before {
     display: none;
+  }
+  .comparisonTable__header {
+    padding: 30px 10px;
+  }
+  .comparisonTable__header:before {
+    height: calc(100% - 25px);
   }
   .comparisonTable__seperator:before {
     display: none;
@@ -406,7 +415,7 @@ body {
   .comparisonTable__inner table {
     border-radius: 20px;
     padding-bottom: 20px;
-    background: rgba(234, 234, 234, 0.9);
+    background: rgba(234, 234, 234, 0.8);
   }
   .comparisonTable__inner table td,
 .comparisonTable__inner table th {
@@ -436,6 +445,9 @@ body {
   }
   .comparisonTable__inner table thead th:first-child .comparisonTable__header {
     padding: 20px 0;
+  }
+  .comparisonTable__inner table thead th:first-child .comparisonTable__header strong {
+    font-size: 24px !important;
   }
   .comparisonTable__inner table thead th:first-child .comparisonTable__header:before {
     display: none;
@@ -476,6 +488,12 @@ body {
   }
   .comparisonTable__box._header::before {
     display: none;
+  }
+  .comparisonTable__header {
+    padding: 30px 10px;
+  }
+  .comparisonTable__header:before {
+    height: calc(100% - 25px);
   }
   .comparisonTable__seperator:before {
     display: none;
