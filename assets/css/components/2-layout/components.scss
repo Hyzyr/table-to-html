@@ -1,0 +1,131 @@
+.autoContainer {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+// .logo {
+//   font-size: 46px;
+//   line-height: 1;
+//   font-weight: 900;
+//   color: $black;
+//   text-transform: uppercase;
+//   letter-spacing: -0.06em;
+//   color: $main;
+//   span {
+//     line-height: 1;
+//   }
+// }
+
+// .button {
+//   cursor: pointer;
+//   display: inline-flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-size: 16px;
+//   padding: 0.8em 1.6em;
+//   border-radius: 0.5em;
+//   box-sizing: border-box;
+//   transition: 0.3s ease-out;
+
+//   //font
+//   line-height: 1em;
+//   font-weight: 700;
+//   font-style: normal;
+//   letter-spacing: -0.02em;
+
+//   &--main {
+//     background: $main-light;
+//     border: 2px solid $main-light;
+
+//     &:hover {
+//       color: $black-main;
+//       border-color: $main-dark;
+//     }
+//   }
+//   &--main2 {
+//     color: $white;
+//     border-radius: 50px;
+//     box-shadow: 1px 1px 1px 1px rgba($main-dark, 0.8);
+//     background: $main-light;
+//     border: 2px solid $main-light;
+
+//     &:hover {
+//       border-color: $main-dark;
+//       box-shadow: 0px 0px 0px 0px rgba($main-dark, 0);
+//     }
+//   }
+//   &--border {
+//     background: transparent;
+//     border: 2px solid $gray-1;
+//     &:hover {
+//       border-color: $gray;
+//       background: rgba($main, 0.15);
+//     }
+//   }
+//   &--icon {
+//     color: $main-dark;
+//     padding: 0.8em 1em;
+
+//     svg {
+//       width: 1em;
+//       height: 1em;
+//     }
+//   }
+
+//   &:active {
+//     opacity: 0.6;
+//   }
+// }
+
+// .shortcut {
+//   cursor: pointer;
+//   display: flex;
+//   flex-direction: column;
+//   background: transparent;
+//   border: 2px solid transparent;
+//   border-radius: 10px;
+//   padding: 5px 8px;
+//   transition: 0.3s ease-out 0.07s;
+//   flex: 1 0 28%;
+//   max-width: 33.3%;
+
+//   span {
+//     color: $gray-0;
+//     white-space: nowrap;
+//   }
+
+//   &:hover {
+//     background: rgba($white, 0.15);
+//     border-color: rgba($main, 0.4);
+//   }
+//   &:active {
+//     background: rgba($white, 0.25);
+//     border-color: rgba($main, 1);
+//   }
+// }
+
+// .input {
+//   position: relative;
+//   width: 100%;
+
+//   input {
+//     height: 100%;
+//     width: 100%;
+//     background: $white-bg;
+//     border: 2px solid $gray-1;
+//     box-sizing: border-box;
+//     border-radius: 1.5em;
+//     padding: 0.5em 1.5em;
+//     transition: 0.3s ease-out;
+//     //font
+//     font-size: 14px;
+//     font-weight: 500;
+//     letter-spacing: -0.02em;
+
+//     &:focus {
+//       background: rgba($white, 0.25);
+//       border-color: $gray;
+//     }
+//   }
+// }
