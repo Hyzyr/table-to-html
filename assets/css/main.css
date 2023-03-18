@@ -360,9 +360,6 @@ body {
   .comparisonTable__inner table thead th:first-child .comparisonTable__header:before {
     display: none;
   }
-  .comparisonTable__inner table thead th:first-child .comparisonTable__header small {
-    display: none;
-  }
   .comparisonTable__inner table tbody {
     position: relative;
   }
