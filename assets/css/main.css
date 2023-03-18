@@ -246,8 +246,8 @@ body {
 }
 .comparisonTable__bg span {
   position: absolute;
-  width: 0;
-  height: 0;
+  width: 1px;
+  height: 1px;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 400px 120px #8427f3;
           box-shadow: 0 0 400px 120px #8427f3;

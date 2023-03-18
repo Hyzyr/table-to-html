@@ -237,8 +237,8 @@
     z-index: -1;
     span {
       position: absolute;
-      width: 0;
-      height: 0;
+      width: 1px;
+      height: 1px;
       border-radius: 50%;
       box-shadow: 0 0 400px 120px $magenta;
 
