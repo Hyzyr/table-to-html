@@ -60,17 +60,11 @@
       tr:nth-child(odd) {
         .comparisonTable__box:not(._header) {
           &::before {
-            background: $white-2;
-          }
-          &._success {
-            &:before {
-              background: mix($white, $green, 97%);
-            }
-          }
-          &._warning {
-            &:before {
-              background: mix($white, $color-4, 97%);
-            }
+            // background: mix($white, $color-3, 80%);
+            // background: rgba(mix($color-3, $white, 40%), 0.19);
+            background: $color-2;
+            background: $gradient-primary;
+            opacity: 0.2;
           }
         }
       }
@@ -120,26 +114,6 @@
       font-size: 24px;
       padding: 0.5em 0;
     }
-    span {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      width: calc(100% - 10px);
-      height: 30px;
-      padding: 5px;
-      box-sizing: border-box;
-      border-radius: 20px;
-      color: $black;
-      background: $white;
-    }
-    small {
-      opacity: 0.8;
-      font-size: 12px;
-    }
-
     &:before {
       content: "";
       display: block;
@@ -170,16 +144,14 @@
   &__box {
     display: flex;
     align-items: center;
-    justify-content: center;
     padding: 5px;
     width: 100%;
     box-sizing: border-box;
 
     //font
-    color: $gray;
+    color: $white !important;
     font-weight: 500;
-    font-size: 16px;
-    text-align: center;
+    font-size: 18px;
 
     &._header {
       color: $white;
@@ -197,6 +169,7 @@
       color: $black-1;
       font-size: 700;
     }
+
     ._ico {
       display: flex;
       align-items: center;
@@ -209,9 +182,23 @@
       margin-right: 1em;
       flex-shrink: 0;
 
-      svg {
+      svg,
+      img {
         width: 0.8em;
         height: 0.8em;
+      }
+    }
+
+    ._ico2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-right: 1em;
+      svg,
+      img {
+        width: 2em;
+        height: 2em;
       }
     }
     &:before {
@@ -222,22 +209,22 @@
       top: 5px;
       width: calc(100% - 10px);
       height: calc(100% - 10px);
-      background: $white;
       box-sizing: border-box;
       border-radius: 20px;
+      // background: mix($white, $color-3, 85%);
+      // background: rgba(mix($color-3, $white, 40%), 0.1);
+      background: $color-2;
+      background: $gradient-primary;
+      opacity: 0.4;
       z-index: -1;
     }
     &._success {
       color: $green;
-      &:before {
-        background: mix($white, $green, 90%);
-      }
+      padding: 5px 1em;
     }
     &._warning {
-      color: $color-4;
-      &:before {
-        background: mix($white, $color-4, 90%);
-      }
+      padding: 5px 1em;
+      color: mix($black, $color-4, 20%);
     }
   }
 
@@ -275,6 +262,13 @@
   }
 }
 
+@mixin comparisonTable-1180 {
+  .comparisonTable {
+    &__box {
+      font-size: 16px;
+    }
+  }
+}
 @mixin comparisonTable-1025 {
   .comparisonTable {
     &__header {

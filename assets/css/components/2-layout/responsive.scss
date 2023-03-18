@@ -1,3 +1,9 @@
+@media (max-width: 1180px) {
+  .autoContainer {
+    padding: 0 50px;
+  }
+  @include comparisonTable-1180;
+}
 @media (max-width: 1025px) {
   .autoContainer {
     padding: 0 40px;
