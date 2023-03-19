@@ -118,3 +118,26 @@
     opacity: 0.6;
   }
 }
+.iconButton {
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  border-radius: 0.4em;
+  padding: 0.4em;
+  box-sizing: border-box;
+  transition: 0.3s ease-out;
+  text-decoration: none;
+  color: $white;
+  
+  img {
+    width: 1em;
+    height: 1em;
+  }
+
+  &:hover {
+    background: rgba($black-bg, 0.05);
+    opacity: 0.8;
+  }
+}
