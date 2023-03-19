@@ -11,7 +11,7 @@
 
   input {
     width: 100%;
-    border-radius: 0.4em;
+    border-radius: 1.2em;
     background: $color-2;
     background: $gradient-secondary;
     padding: 0.8em 1.3em;
@@ -69,7 +69,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 18px;
   border-radius: 0.4em;
   padding: 0.8em 1em;
   box-sizing: border-box;
@@ -99,7 +99,7 @@
       align-items: center;
       justify-content: center;
       box-sizing: border-box;
-      padding: 0.8em 1em;
+      padding: 0.8em;
       box-shadow: inset 0 0 3px rgba($white, 0);
     }
 

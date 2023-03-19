@@ -1,0 +1,107 @@
+.headerSection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 15px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    &-logo {
+      width: 400px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .burger {
+      display: none;
+    }
+  }
+}
+.nav {
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__item {
+    cursor: pointer;
+    padding: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: 0.3s ease-in-out;
+
+    //font
+    font-family: $font-secondary;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: rgba($white-3, 0.95);
+
+    &._dropdown {
+      position: relative;
+      padding-right: 1.2em;
+
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 50%;
+        right: 0;
+        width: 0.3em;
+        height: 0.3em;
+        border-top: 3px solid currentColor;
+        border-right: 3px solid currentColor;
+        z-index: 1;
+        transform: translate(-50%, -50%) rotate(135deg);
+        transition: 0.2s ease;
+      }
+    }
+    &-dropdown {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 80%;
+      left: 50%;
+      min-width: 100%;
+      max-height: 0;
+      transform: translateX(-50%);
+      box-sizing: border-box;
+      background: rgba($black-bg, 0.8);
+      border-radius: 5px;
+      border: 2px solid rgba($white, 0.1);
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0s ease 0.3s, top 0.3s ease-in-out,
+        opacity 0.3s ease-in-out;
+
+      .nav__item {
+        padding: 5px 15px;
+        border-bottom: 2px solid rgba($white, 0.1);
+      }
+    }
+    &:hover {
+      color: $white;
+      .nav {
+        &__item {
+          &-dropdown {
+            top: 100%;
+            max-height: 400px;
+            overflow-y: auto;
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+            transition-property: top, opacity;
+          }
+        }
+      }
+    }
+  }
+}

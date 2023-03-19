@@ -53,6 +53,18 @@
         transform: translateY(-50px);
       }
     }
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 60%;
+      max-height: 600px;
+      opacity: 0.8;
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
   }
   &__search {
     display: flex;
@@ -72,6 +84,7 @@
     &-item {
       display: flex;
       align-items: center;
+      justify-content: space-around;
       min-height: 75px;
       gap: 0.8em;
       list-style: none;
@@ -79,7 +92,7 @@
       background: rgba($white, 0.9);
       box-sizing: border-box;
       padding: 0.8em 1.4em;
-      margin-bottom: 0.6em;
+      margin-bottom: 0.8em;
 
       //font
       color: $black-1;
@@ -97,17 +110,12 @@
         &:nth-child(3) {
           width: 10%;
         }
-        &:nth-child(4) {
-          width: 25%;
-          max-width: 220px;
-        }
-        &:last-child {
-          width: 25%;
-          max-width: 220px;
-        }
       }
       ._action {
         align-self: stretch;
+        width: 25%;
+        max-width: 230px;
+
         .button {
           height: 100%;
           width: 100%;
@@ -134,18 +142,19 @@
       &._header {
         position: relative;
         font-weight: 500;
-        margin-bottom: 1.8em;
         overflow: hidden;
         color: mix($magenta, $black, 60%);
 
         & > div {
           font-size: 20px;
         }
+        ._action {
+          align-self: center;
+        }
       }
     }
   }
 }
-
 .faqSection {
   position: relative;
   padding: 50px 0;
@@ -206,17 +215,6 @@
         left: 40%;
         opacity: 0.2;
         transform: scale(1.6) translateY(-50px);
-      }
-    }
-    &-img {
-      position: absolute;
-      top: 0;
-      left: 90%;
-      width: 60%;
-      max-height: 600px;
-      img {
-        height: auto;
-        width: 100%;
       }
     }
   }
