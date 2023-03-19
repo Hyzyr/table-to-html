@@ -190,7 +190,7 @@ body {
   height: 1em;
 }
 .iconButton:hover {
-  background: rgba(17, 1, 30, 0.05);
+  background: rgba(17, 1, 30, 0.15);
   opacity: 0.8;
 }
 
