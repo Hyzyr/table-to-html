@@ -15,12 +15,13 @@ $color-5: #e58906;
 $green: #00a58c;
 
 $gradient-1: linear-gradient(45deg, $color-1, $color-2);
+$gradient-1-reverse: linear-gradient(45deg, $color-2, $color-1, $color-3);
 $gradient-2: linear-gradient(45deg, $color-4, $color-5);
 $gradient-primary: linear-gradient(
   45deg,
-  #af34ff 0.52%,
-  #5159f7 49.52%,
-  #08a5ff 99.54%
+  $color-2 0.52%,
+  $color-1 49.52%,
+  $color-3 99.54%
 );
 $gradient-secondary-reverse: linear-gradient(
   45deg,
@@ -30,7 +31,13 @@ $gradient-secondary-reverse: linear-gradient(
 $gradient-secondary: linear-gradient(
   45deg,
   #511281 0%,
-  rgba(81, 18, 129, 0) 100%
+  mix($black-bg, $magenta, 80%) 100%
+);
+$gradient-eth: linear-gradient(
+  90deg,
+  #968cff -16.5%,
+  #7e98ff 37.49%,
+  #52e3ff 125.5%
 );
 
 $font-secondary: "Rubik", sans-serif;
