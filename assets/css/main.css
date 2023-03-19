@@ -784,12 +784,13 @@ body {
   gap: 0.8em;
   list-style: none;
   border-radius: 1.6em;
-  background: rgba(255, 255, 255, 0.9);
+  background: #af34ff;
+  background: linear-gradient(45deg, #511281 0%, #280949 100%);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0.8em 1.4em;
   margin-bottom: 0.8em;
-  color: #333;
+  color: #c4c4c4;
   font-size: 18px;
   font-weight: 400;
   font-family: "Rubik", sans-serif;
@@ -844,7 +845,7 @@ body {
   position: relative;
   font-weight: 500;
   overflow: hidden;
-  color: #561e99;
+  color: #fff;
 }
 .searchSection__results-item._header > div {
   font-size: 20px;
@@ -1215,6 +1216,12 @@ body {
   .comparisonTable__box {
     font-size: 16px;
   }
+  .searchSection__search .button {
+    min-width: unset;
+  }
+  .searchSection__search .input__helper .textLink {
+    font-size: 14px;
+  }
 }
 @media (max-width: 1025px) {
   body.active {
@@ -1353,6 +1360,27 @@ body {
   }
   .comparisonTable__box {
     font-size: 14px;
+  }
+  .searchSection__search {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+    padding-bottom: 0;
+    margin-bottom: 70px;
+  }
+  .searchSection__search .input {
+    width: 100%;
+    max-width: unset;
+    margin-bottom: 50px;
+  }
+  .searchSection__search .button {
+    height: 60px;
+    width: 40%;
   }
   .faqSection__inner-tabs {
     -webkit-box-pack: center;

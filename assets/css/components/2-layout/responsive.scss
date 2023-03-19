@@ -7,6 +7,7 @@
   }
   @include header-1180;
   @include comparisonTable-1180;
+  @include search-1180;
 }
 @media (max-width: 1025px) {
   body.active {
