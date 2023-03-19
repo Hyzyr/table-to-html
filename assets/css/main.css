@@ -186,8 +186,8 @@ body {
   border-radius: 10px;
   background: linear-gradient(45deg, #5159f7, #af34ff, #08a5ff, #f72585, #e58906, #5159f7);
   background-size: 400%;
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
   opacity: 0;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
@@ -864,21 +864,21 @@ body {
   opacity: 0;
 }
 .faqSection__bg span:nth-child(1) {
-  top: 70%;
+  top: 495px;
   left: 22%;
   opacity: 0.6;
   -webkit-transform: scale(1.2) translateY(-50px);
           transform: scale(1.2) translateY(-50px);
 }
 .faqSection__bg span:nth-child(2) {
-  top: 50%;
+  top: 355px;
   right: 22%;
   opacity: 0.23;
   -webkit-transform: scale(2.2) translateY(-50px);
           transform: scale(2.2) translateY(-50px);
 }
 .faqSection__bg span:nth-child(3) {
-  bottom: 20%;
+  bottom: 155px;
   left: 40%;
   opacity: 0.2;
   -webkit-transform: scale(1.6) translateY(-50px);

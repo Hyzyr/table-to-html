@@ -197,21 +197,24 @@
       opacity: 0;
 
       &:nth-child(1) {
-        top: 70%;
+        // top: 70%;
+        top: 495px;
         left: 22%;
         opacity: 0.6;
         transform: scale(1.2) translateY(-50px);
       }
 
       &:nth-child(2) {
-        top: 50%;
+        // top: 50%;
+        top: 355px;
         right: 22%;
         opacity: 0.23;
         transform: scale(2.2) translateY(-50px);
       }
 
       &:nth-child(3) {
-        bottom: 20%;
+        // bottom: 20%;
+        bottom: 155px;
         left: 40%;
         opacity: 0.2;
         transform: scale(1.6) translateY(-50px);
