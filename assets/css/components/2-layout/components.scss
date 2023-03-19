@@ -52,6 +52,18 @@
     z-index: -1;
   }
 }
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
 .button {
   cursor: pointer;
   display: inline-flex;
@@ -71,16 +83,79 @@
   letter-spacing: -0.02em;
 
   &--primary {
+    position: relative;
     color: $white;
-    background: $gradient-1-reverse;
-    box-shadow: 0 5px 50px 5px rgba($black-bg, 0.1);
     transition-delay: 0.2s;
+    z-index: 0;
+    padding: 0;
+
+    span {
+      background: $gradient-1-reverse;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      border-radius: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      padding: 0.8em 1em;
+      box-shadow: inset 0 0 3px rgba($white, 0);
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      bottom: -2px;
+      right: -2px;
+      z-index: -1;
+      z-index: -1;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      // opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+      background: linear-gradient(
+        45deg,
+        $color-1,
+        $color-2,
+        $color-3,
+        $color-4,
+        $color-5,
+        $color-1
+      );
+      background-size: 400%;
+      filter: blur(4px);
+      opacity: 0;
+      transform: scale(0.8);
+      animation: glowing 20s linear infinite;
+    }
 
     &:hover {
-      opacity: 0.8;
-      transition-delay: 0s;
+      opacity: 1;
+      span {
+        box-shadow: inset 0 0 1px 1px rgba($white, 0.6);
+      }
+      &:before {
+        opacity: 0.9;
+        transform: scale(1);
+      }
     }
-    // bac
+
+    &._lg {
+      padding: 0;
+
+      span {
+        padding: 0.8em 1.6em;
+      }
+      &:hover {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
   }
   &--shadow {
     box-shadow: 0 5px 50px 5px rgba($black-bg, 0.1);
@@ -111,9 +186,7 @@
     }
     // bac
   }
-  &._lg {
-    padding: 0.8em 1.6em;
-  }
+
   &:active {
     opacity: 0.6;
   }
@@ -140,7 +213,7 @@
 
   &:hover {
     background: rgba($black-bg, 0.25);
-    border-color:  rgba($white, 0.25);
+    border-color: rgba($white, 0.25);
     box-shadow: inset -5px -10px 20px rgba($magenta, 0.26);
   }
 }
