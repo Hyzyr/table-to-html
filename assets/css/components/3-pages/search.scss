@@ -152,9 +152,14 @@
     }
     &-img {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(20%, -50%);
+      top: 0;
+      left: 60%;
+      width: 60%;
+      max-height: 600px;
+      img {
+        height: auto;
+        width: 100%;
+      }
     }
   }
   &__inner {
@@ -194,7 +199,6 @@
     position: relative;
     box-sizing: border-box;
     background: transparent;
-
     //border
     $border: 2px;
     border-radius: 10px;
@@ -213,12 +217,35 @@
       background: $gradient-eth;
       opacity: 0.6;
     }
+    &-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+      overflow: hidden;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 80%;
+        bottom: 50%;
+        width: 1px;
+        height: 1px;
+        border: 0;
+        border-radius: 50%;
+        box-shadow: 0 0 250px 150px $magenta;
+        opacity: 0.2;
+        -webkit-appearance: none;
+        transition: 0.3s ease-in-out;
+      }
+    }
 
     &-header {
       position: relative;
       cursor: pointer;
       padding: 1em 2.6em 1em 1em;
-
       //font
       color: $white;
       font-size: 18px;
@@ -278,10 +305,11 @@
       }
     }
     &-body {
+      position: relative;
       max-height: 0;
       overflow: hidden;
       padding: 0 15px;
-      transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+      transition: 0.4s ease;
       //font
       color: $white;
       font-size: 16px;
@@ -293,6 +321,14 @@
 
     &.active {
       .faqSection__tab {
+        &-bg {
+          &:after {
+            right: 10px;
+            bottom: 0;
+            opacity: 0.3;
+            transition-property: opacity;
+          }
+        }
         &-header {
           &::after {
             width: calc(60%);
@@ -301,7 +337,6 @@
           }
           ._ico {
             transform: translateY(-50%) rotate(90deg);
-            opacity: 0.5;
           }
         }
 

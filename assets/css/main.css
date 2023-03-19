@@ -747,10 +747,14 @@ body {
 }
 .faqSection__bg-img {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(20%, -50%);
-          transform: translate(20%, -50%);
+  top: 0;
+  left: 60%;
+  width: 60%;
+  max-height: 600px;
+}
+.faqSection__bg-img img {
+  height: auto;
+  width: 100%;
 }
 .faqSection__inner-title h3 {
   color: #fff;
@@ -815,6 +819,31 @@ body {
   background: -webkit-gradient(linear, left top, right top, color-stop(-16.5%, #968cff), color-stop(37.49%, #7e98ff), color-stop(125.5%, #52e3ff));
   background: linear-gradient(90deg, #968cff -16.5%, #7e98ff 37.49%, #52e3ff 125.5%);
   opacity: 0.6;
+}
+.faqSection__tab-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.faqSection__tab-bg:after {
+  content: "";
+  position: absolute;
+  right: 80%;
+  bottom: 50%;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 250px 150px #8427f3;
+          box-shadow: 0 0 250px 150px #8427f3;
+  opacity: 0.2;
+  -webkit-appearance: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .faqSection__tab-header {
   position: relative;
@@ -882,17 +911,25 @@ body {
   transition: 0.2s linear;
 }
 .faqSection__tab-body {
+  position: relative;
   max-height: 0;
   overflow: hidden;
   padding: 0 15px;
-  -webkit-transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
   color: #fff;
   font-size: 16px;
   font-weight: 400;
   font-family: "Rubik", sans-serif;
   line-height: 1.4;
   opacity: 0;
+}
+.faqSection__tab.active .faqSection__tab-bg:after {
+  right: 10px;
+  bottom: 0;
+  opacity: 0.3;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
 }
 .faqSection__tab.active .faqSection__tab-header::after {
   width: 60%;
@@ -903,7 +940,6 @@ body {
 .faqSection__tab.active .faqSection__tab-header ._ico {
   -webkit-transform: translateY(-50%) rotate(90deg);
           transform: translateY(-50%) rotate(90deg);
-  opacity: 0.5;
 }
 .faqSection__tab.active .faqSection__tab-body {
   opacity: 1;
