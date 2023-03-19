@@ -73,12 +73,13 @@
     margin-bottom: 80px;
 
     .input {
-      flex-grow: 1;
+      flex-grow: 8;
+      flex-shrink: 0;
       width: unset;
       max-width: 700px;
     }
     .button {
-      min-width: 215px;
+      flex-grow: 1;
     }
   }
   &__results {
@@ -124,6 +125,9 @@
           height: 100%;
           width: 100%;
         }
+      }
+      ._hidden {
+        display: none;
       }
       ._ico {
         display: flex;
@@ -501,6 +505,7 @@
     &__search {
       .button {
         min-width: unset;
+        flex-grow: unset;
       }
       .input__helper {
         .textLink {
@@ -549,6 +554,42 @@
         &-column {
           width: 100%;
           max-width: 600px;
+        }
+      }
+    }
+  }
+}
+@mixin search-740 {
+  .searchSection {
+    &__search {
+      column-gap: 20px;
+      .button {
+        flex-grow: 1;
+      }
+    }
+    &__results {
+      &-item {
+        display: flex;
+        flex-direction: column;
+
+        & > div {
+          flex: unset;
+          width: 100%;
+
+          .button {
+            width: 100%;
+            max-width: unset;
+          }
+        }
+        & > ._action {
+          width: 100%;
+          max-width: unset;
+        }
+        // font-size: 14px;
+        // min-height: 60px;
+
+        &._header {
+          display: none;
         }
       }
     }
