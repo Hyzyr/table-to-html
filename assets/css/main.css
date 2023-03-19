@@ -762,18 +762,10 @@ body {
   margin-bottom: 80px;
 }
 .searchSection__search .input {
-  -webkit-box-flex: 8;
-      -ms-flex-positive: 8;
-          flex-grow: 8;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  width: unset;
-  max-width: 700px;
+  width: 55%;
 }
 .searchSection__search .button {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  width: calc(22.5% - 15px);
 }
 .searchSection__results-item {
   display: -webkit-box;
@@ -1222,7 +1214,13 @@ body {
   .comparisonTable__box {
     font-size: 16px;
   }
+  .searchSection__search .input {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
   .searchSection__search .button {
+    width: unset;
     min-width: unset;
     -webkit-box-flex: unset;
         -ms-flex-positive: unset;
@@ -1387,6 +1385,9 @@ body {
     max-width: unset;
     margin-bottom: 50px;
   }
+  .searchSection__search .input__helper .textLink {
+    font-size: 12px;
+  }
   .searchSection__search .button {
     height: 60px;
     width: 40%;
@@ -1406,6 +1407,18 @@ body {
     width: 100%;
     max-width: 600px;
   }
+  .footerSection__bg-img {
+    height: 230px;
+  }
+  .footerSection__inner-title h3 {
+    margin: 0;
+  }
+  .footerSection__inner-links {
+    padding: 60px 0 70px 0;
+  }
+  .footerSection__inner-links .iconButton {
+    padding: 1.5em;
+  }
 }
 @media (max-width: 740px) {
   .autoContainer {
@@ -1421,31 +1434,68 @@ body {
         -ms-flex-positive: 1;
             flex-grow: 1;
   }
+  .searchSection__search .input__helper .textLink {
+    font-size: 10px;
+  }
   .searchSection__results-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 1em 2em;
   }
   .searchSection__results-item > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-flex: unset;
         -ms-flex: unset;
             flex: unset;
+    font-size: 18px;
+    font-weight: 700;
     width: 100%;
+  }
+  .searchSection__results-item > div:nth-child(n) {
+    width: 100%;
+    max-width: unset;
   }
   .searchSection__results-item > div .button {
     width: 100%;
-    max-width: unset;
   }
-  .searchSection__results-item > ._action {
-    width: 100%;
-    max-width: unset;
+  .searchSection__results-item ._hidden {
+    display: block;
+    font-weight: 500;
+    color: #333;
+  }
+  .searchSection__results-item ._ico {
+    display: none;
+  }
+  .searchSection__results-item ._action {
+    margin: 10px 0;
+    width: calc(50% - 8px) !important;
   }
   .searchSection__results-item._header {
     display: none;
+  }
+  .footerSection__bg-img {
+    height: 200px;
+  }
+  .footerSection__inner-title h3 {
+    margin: 0;
+  }
+  .footerSection__inner-links {
+    padding: 40px 0 60px 0;
+  }
+  .footerSection__inner-links .iconButton {
+    font-size: 12px;
   }
   .comparisonTable__header span {
     font-size: 12px;
@@ -1566,7 +1616,53 @@ body {
   .autoContainer {
     padding: 0 10px;
   }
-  .comparisonTable__box {
-    font-size: 14px;
+  .searchSection__search {
+    -webkit-column-gap: 8px;
+       -moz-column-gap: 8px;
+            column-gap: 8px;
+    margin-bottom: 50px;
+  }
+  .searchSection__search .button {
+    height: unset;
+    width: 90%;
+    -webkit-box-flex: unset;
+        -ms-flex-positive: unset;
+            flex-grow: unset;
+  }
+  .searchSection__search .input__helper .textLink {
+    font-size: 8px;
+  }
+  .searchSection__results-item {
+    margin-bottom: 15px;
+    padding: 1em;
+  }
+  .searchSection__results-item > div {
+    font-size: 16px;
+  }
+  .searchSection__results-item ._ico {
+    display: none;
+  }
+  .searchSection__results-item ._action {
+    margin: 0;
+    width: 100% !important;
+  }
+  .searchSection__results-item._header {
+    display: none;
+  }
+  .faqSection__inner-title h3 {
+    font-size: 28px;
+  }
+  .footerSection__bg-img {
+    height: 150px;
+  }
+  .footerSection__inner-title h3 {
+    font-size: 28px;
+  }
+  .footerSection__inner-links {
+    padding: 40px 0 50px 0;
+    gap: 10px;
+  }
+  .footerSection__inner-links .iconButton {
+    font-size: 8px;
   }
 }

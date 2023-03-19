@@ -73,13 +73,10 @@
     margin-bottom: 80px;
 
     .input {
-      flex-grow: 8;
-      flex-shrink: 0;
-      width: unset;
-      max-width: 700px;
+      width: 55%;
     }
     .button {
-      flex-grow: 1;
+      width: calc(45% / 2 - 15px);
     }
   }
   &__results {
@@ -503,7 +500,11 @@
 @mixin search-1180 {
   .searchSection {
     &__search {
+      .input {
+        flex-grow: 1;
+      }
       .button {
+        width: unset;
         min-width: unset;
         flex-grow: unset;
       }
@@ -529,6 +530,12 @@
         width: 100%;
         max-width: unset;
         margin-bottom: 50px;
+
+        &__helper {
+          .textLink {
+            font-size: 12px;
+          }
+        }
       }
       .button {
         height: 60px;
@@ -558,6 +565,27 @@
       }
     }
   }
+  .footerSection {
+    &__bg {
+      &-img {
+        height: 230px;
+      }
+    }
+    &__inner {
+      &-title {
+        h3 {
+          margin: 0;
+        }
+      }
+      &-links {
+        padding: 60px 0 70px 0;
+
+        .iconButton {
+          padding: 1.5em;
+        }
+      }
+    }
+  }
 }
 @mixin search-740 {
   .searchSection {
@@ -566,30 +594,147 @@
       .button {
         flex-grow: 1;
       }
+      .input__helper {
+        .textLink {
+          font-size: 10px;
+        }
+      }
     }
     &__results {
+      // max-width: 500px;
+      // margin: 0px auto;
+
       &-item {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        padding: 1em 2em;
 
         & > div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           flex: unset;
+          font-size: 18px;
+          font-weight: 700;
           width: 100%;
 
-          .button {
+          &:nth-child(n) {
             width: 100%;
             max-width: unset;
           }
+          .button {
+            width: 100%;
+          }
         }
-        & > ._action {
-          width: 100%;
-          max-width: unset;
+        ._hidden {
+          display: block;
+          font-weight: 500;
+          color: $black-1;
+        }
+        ._ico {
+          display: none;
+        }
+        ._action {
+          margin: 10px 0;
+          width: calc(50% - 8px) !important;
         }
         // font-size: 14px;
         // min-height: 60px;
 
         &._header {
           display: none;
+        }
+      }
+    }
+  }
+  .footerSection {
+    &__bg {
+      &-img {
+        height: 200px;
+      }
+    }
+    &__inner {
+      &-title {
+        h3 {
+          margin: 0;
+        }
+      }
+      &-links {
+        padding: 40px 0 60px 0;
+
+        .iconButton {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+@mixin comparisonTable-540 {
+  .searchSection {
+    &__search {
+      column-gap: 8px;
+      margin-bottom: 50px;
+
+      .button {
+        height: unset;
+        width: 90%;
+        flex-grow: unset;
+      }
+      .input__helper {
+        .textLink {
+          font-size: 8px;
+        }
+      }
+    }
+    &__results {
+      &-item {
+        margin-bottom: 15px;
+        padding: 1em;
+
+        & > div {
+          font-size: 16px;
+        }
+        ._ico {
+          display: none;
+        }
+        ._action {
+          margin: 0;
+          width: 100% !important;
+        }
+
+        &._header {
+          display: none;
+        }
+      }
+    }
+  }
+  .faqSection {
+    &__inner {
+      &-title {
+        h3 {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+  .footerSection {
+    &__bg {
+      &-img {
+        height: 150px;
+      }
+    }
+    &__inner {
+      &-title {
+        h3 {
+          font-size: 28px;
+        }
+      }
+      &-links {
+        padding: 40px 0 50px 0;
+        gap: 10px;
+        .iconButton {
+          font-size: 8px;
         }
       }
     }
