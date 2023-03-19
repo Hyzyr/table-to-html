@@ -1300,12 +1300,17 @@ body {
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
     background: rgba(17, 1, 30, 0.8);
-    display: none;
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transform: translateX(-120%);
+            transform: translateX(-120%);
+    -webkit-transition: all 0s ease-out 0.3s, opacity 0.2s ease-out 0.2s;
+    transition: all 0s ease-out 0.3s, opacity 0.2s ease-out 0.2s;
   }
   .nav__inner {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -400px;
     width: 40%;
     height: 100%;
     max-width: 250px;
@@ -1313,6 +1318,8 @@ body {
     background: #c4c4c4;
     -webkit-box-shadow: 5px 0 35px 10px rgba(132, 39, 243, 0.2);
             box-shadow: 5px 0 35px 10px rgba(132, 39, 243, 0.2);
+    -webkit-transition: left 0.2s ease-out 0s;
+    transition: left 0.2s ease-out 0s;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1344,6 +1351,19 @@ body {
   }
   .nav__item-dropdown .nav__item {
     border: 0;
+  }
+  .nav.active {
+    pointer-events: all;
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transition: opacity 0.3s ease-out 0s;
+    transition: opacity 0.3s ease-out 0s;
+  }
+  .nav.active .nav__inner {
+    left: 0px;
+    -webkit-transition: left 0.4s ease-out 0.15s;
+    transition: left 0.4s ease-out 0.15s;
   }
   .comparisonTable__header strong {
     font-size: 20px;
