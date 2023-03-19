@@ -750,9 +750,24 @@ body {
           justify-content: space-between;
   gap: 20px;
 }
+.faqSection__inner-tabs-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: calc(50% - 15px);
+  gap: 20px;
+}
 .faqSection__tab {
   position: relative;
-  width: calc(50% - 15px);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: transparent;
@@ -776,15 +791,14 @@ body {
 .faqSection__tab-header {
   position: relative;
   cursor: pointer;
+  padding: 1em 2.6em 1em 1em;
   color: #fff;
   font-size: 18px;
   font-weight: 700;
   font-family: "Rubik", sans-serif;
   line-height: 1.2;
-  padding: 1em 2.6em 1em 1em;
-  z-index: 0;
 }
-.faqSection__tab-header::after {
+.faqSection__tab-header ._ico {
   position: absolute;
   content: "";
   display: block;
@@ -792,18 +806,31 @@ body {
   right: 1em;
   width: 1.8em;
   height: 1.8em;
-  border-radius: 50%;
-  background: linear-gradient(45deg, #af34ff 0.52%, #5159f7 49.52%, #08a5ff 99.54%);
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  opacity: 0.6;
+  z-index: 0;
+  -webkit-transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.faqSection__tab-header::before {
+.faqSection__tab-header ._ico::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #af34ff 0.52%, #5159f7 49.52%, #08a5ff 99.54%);
+  opacity: 0.6;
+  z-index: -1;
+}
+.faqSection__tab-header ._ico::before {
   position: absolute;
   content: "";
   display: block;
   top: 50%;
-  right: 1.9em;
+  right: 50%;
   width: 0.5em;
   height: 0.5em;
   border-top: 3px solid #fff;
@@ -812,10 +839,46 @@ body {
   -webkit-transform: translate(40%, -50%) rotate(45deg);
           transform: translate(40%, -50%) rotate(45deg);
 }
+.faqSection__tab-header::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 100%;
+  left: 1em;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-16.5%, #968cff), color-stop(37.49%, #7e98ff), color-stop(125.5%, #52e3ff));
+  background: linear-gradient(90deg, #968cff -16.5%, #7e98ff 37.49%, #52e3ff 125.5%);
+  width: 0;
+  opacity: 0;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
 .faqSection__tab-body {
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
   max-height: 0;
   overflow: hidden;
   padding: 0 15px;
+  -webkit-transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.4;
+  opacity: 0;
+}
+.faqSection__tab.active .faqSection__tab-header::after {
+  width: 60%;
+  opacity: 1;
+  -webkit-transition: width 0.6s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s;
+  transition: width 0.6s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s;
+}
+.faqSection__tab.active .faqSection__tab-header ._ico {
+  -webkit-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
+  opacity: 0.5;
+}
+.faqSection__tab.active .faqSection__tab-body {
+  opacity: 1;
+  padding: 20px 15px;
+  max-height: 500px;
 }
