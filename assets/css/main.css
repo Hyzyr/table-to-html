@@ -994,31 +994,28 @@ body {
 }
 .footerSection__bg span {
   position: absolute;
-  bottom: 0;
   left: 50%;
-  width: 50vh;
-  height: 50vh;
+  top: 100%;
+  width: 1px;
+  height: 1px;
   border: 0;
   border-radius: 50%;
-  background: #8427f3;
+  -webkit-box-shadow: 0 0 300px 200px #8427f3;
+          box-shadow: 0 0 300px 200px #8427f3;
   -webkit-appearance: none;
-  -webkit-filter: blur(120px);
-          filter: blur(120px);
 }
 .footerSection__bg span:nth-child(1) {
-  opacity: 0.5;
-  -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
+  opacity: 0.4;
 }
 .footerSection__bg span:nth-child(2) {
-  opacity: 0.2;
-  -webkit-transform: translate(-50%, 50%) scale(2);
-          transform: translate(-50%, 50%) scale(2);
+  opacity: 0.15;
+  -webkit-transform: scale(2);
+          transform: scale(2);
 }
 .footerSection__bg span:nth-child(3) {
-  opacity: 0.15;
-  -webkit-transform: translate(-50%, 50%) scale(4);
-          transform: translate(-50%, 50%) scale(4);
+  opacity: 0.05;
+  -webkit-transform: scale(3);
+          transform: scale(3);
 }
 .footerSection__inner {
   display: -webkit-box;
