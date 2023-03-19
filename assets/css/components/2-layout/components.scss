@@ -18,7 +18,7 @@
     border: 1px solid rgba($color-2, 0.1);
     transition: 0.3s ease-out;
     // font
-    color: $white;
+    color: mix($color-2, $white, 20%);
     font-family: $font-secondary;
     font-size: 18px;
     font-weight: 500;
@@ -28,11 +28,12 @@
       color: rgba($white, 0.8);
     }
     &:focus {
-      border: 1px solid rgba($color-2, 0.25);
+      color: $white;
+      border: 1px solid rgba($color-2, 0.3);
       & + .input__shadow {
         border-radius: 40%;
-        box-shadow: -5px 0 25px 0px rgba($magenta, 0.45),
-          -20px 5px 60px 40px rgba($black-bg, 0.55);
+        box-shadow: -5px 0 25px 3px rgba($magenta, 0.35),
+          -20px 5px 60px 40px rgba($black-bg, 0.35);
       }
     }
   }
@@ -46,8 +47,8 @@
     border-radius: 50%;
     transition: 0.3s ease-out;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 35px 10px rgba($magenta, 0.5),
-      -20px 5px 50px 50px rgba($black-bg, 0.6);
+    box-shadow: 0 0 35px 10px rgba($magenta, 0.2),
+      -30px 5px 50px 50px rgba($black-bg, 0.36);
     z-index: -1;
   }
 }
@@ -57,8 +58,8 @@
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  padding: 0.8em 1.6em;
   border-radius: 0.4em;
+  padding: 0.8em 1em;
   box-sizing: border-box;
   transition: 0.3s ease-out;
 
@@ -73,13 +74,45 @@
     color: $white;
     background: $gradient-1-reverse;
     box-shadow: 0 5px 50px 5px rgba($black-bg, 0.1);
+    transition-delay: 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+      transition-delay: 0s;
+    }
+    // bac
+  }
+  &--shadow {
+    box-shadow: 0 5px 50px 5px rgba($black-bg, 0.1);
 
     &:hover {
       box-shadow: 0 5px 50px 5px rgba($black-bg, 0.1),
-        0 2px 10px 0px rgba($black-bg, 0.25), inset 0 0 10px rgba($white, 0.26);
+        0 2px 10px 0px rgba($black-bg, 0.25), inset 0 0 10px rgba($white, 0.22);
       opacity: 0.9;
     }
+  }
+  &--border {
+    color: $black;
+    // box-shadow: 0 5px 50px 5px rgba($black-bg, 0.1);
+    transition-delay: 0.2s;
+    border: 1px solid $color-2;
+    background: transparent;
+
+    span {
+      display: inline-block;
+      @include textGradient($gradient-1-reverse);
+    }
+
+    &:hover {
+      opacity: 0.8;
+      border-color: $color-3;
+      transition-delay: 0s;
+      background: rgba($color-2, 0.07);
+    }
     // bac
+  }
+  &._lg {
+    padding: 0.8em 1.6em;
   }
   &:active {
     opacity: 0.6;

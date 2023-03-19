@@ -1,39 +1,58 @@
+.mainContainer {
+  overflow: hidden;
+  min-height: 100%;
+
+  ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+  }
+}
 .searchSection {
   position: relative;
   min-height: 40vh;
+  padding: 130px 0 40px 0;
+
   &__bg {
     position: absolute;
-    pointer-events: none;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: -1;
+
     span {
       position: absolute;
       width: 1px;
       height: 1px;
       border: 0;
       border-radius: 50%;
-      box-shadow: 0 0 400px 120px $magenta;
+      box-shadow: 0 0 250px 150px $magenta;
       -webkit-appearance: none;
 
       &:nth-child(1) {
-        top: 50%;
+        top: 80%;
         left: 20%;
-        transform: scale(1.6);
-        opacity: 0.8;
+        opacity: 0.3;
+        transform: scale(1.4);
       }
       &:nth-child(2) {
-        bottom: 10%;
-        right: 20%;
+        bottom: 0;
+        right: 10%;
+        opacity: 0.08;
+        transform: scale(4);
       }
       &:nth-child(3) {
-        top: 25%;
-        right: 40%;
-        opacity: 0.5;
-        transform: scale(3);
+        top: 20%;
+        left: 22%;
+        opacity: 0.3;
+        transform: translateY(-50px);
       }
+    }
+    &-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
     }
   }
   &__search {
@@ -45,6 +64,165 @@
       width: calc(100% - 415px);
       max-width: 700px;
       margin-right: auto;
+    }
+  }
+  &__results {
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 75px;
+      gap: 0.8em;
+      list-style: none;
+      border-radius: 1.6em;
+      background: rgba($white, 0.9);
+      box-sizing: border-box;
+      padding: 0.8em 1.4em;
+      margin-bottom: 0.6em;
+
+      //font
+      color: $black;
+      font-size: 18px;
+      font-weight: 400;
+      font-family: $font-secondary;
+      text-align: center;
+
+      & > div {
+        flex: 1 0 0;
+        max-width: 220px;
+
+        &:nth-child(2) {
+          text-align: left;
+        }
+        &:nth-child(3) {
+          flex-grow: 0.5;
+        }
+        &:last-child {
+          max-width: 250px;
+        }
+      }
+      ._ico {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.4em;
+        height: 1.4em;
+        border-radius: 50%;
+        background: $gradient-primary;
+        flex: unset;
+        opacity: 0.9;
+        pointer-events: none;
+
+        img {
+          width: 0.8em;
+          height: 0.8em;
+          object-fit: contain;
+        }
+      }
+      &._header {
+        margin-bottom: 1.8em;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.faqSection {
+  padding: 20px 0;
+
+  &__inner {
+    &-title {
+      h3 {
+        //font
+        color: $white;
+        font-size: 36px;
+        font-weight: 700;
+        font-family: $font-secondary;
+        text-align: center;
+        line-height: 1.2;
+        margin-bottom: 40px;
+
+        span {
+          @include textGradient($gradient-eth);
+        }
+      }
+    }
+    &-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  }
+  &__tab {
+    position: relative;
+    width: calc(50% - 15px);
+    box-sizing: border-box;
+    background: transparent;
+
+    //border
+    $border: 2px;
+    border-radius: 10px;
+    background: $black-bg;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: -$border;
+      border-radius: inherit;
+      z-index: -1;
+      background: $gradient-eth;
+      opacity: 0.6;
+    }
+
+    &-header {
+      position: relative;
+      cursor: pointer;
+      //font
+      color: $white;
+      font-size: 18px;
+      font-weight: 700;
+      font-family: $font-secondary;
+      line-height: 1.2;
+      padding: 1em 2.6em 1em 1em;
+      z-index: 0;
+
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 50%;
+        right: 1em;
+        width: 1.8em;
+        height: 1.8em;
+        border-radius: 50%;
+        background: $gradient-primary;
+        transform: translateY(-50%);
+        opacity: 0.6;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 50%;
+        right: 1.9em;
+        width: 0.5em;
+        height: 0.5em;
+        border-top: 3px solid $white;
+        border-right: 3px solid $white;
+        z-index: 1;
+        transform: translate(40%, -50%) rotate(45deg);
+      }
+    }
+    &-body {
+      transition: 0.3s ease;
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 15px;
     }
   }
 }
