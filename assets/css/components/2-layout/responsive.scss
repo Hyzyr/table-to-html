@@ -2,13 +2,21 @@
   .autoContainer {
     padding: 0 50px;
   }
+  .button {
+    font-size: 16px;
+  }
   @include header-1180;
   @include comparisonTable-1180;
 }
 @media (max-width: 1025px) {
+  body.active {
+    overflow: hidden;
+  }
   .autoContainer {
     padding: 0 40px;
   }
+
+  @include header-1025;
   @include comparisonTable-1025;
 }
 @media (max-width: 940px) {

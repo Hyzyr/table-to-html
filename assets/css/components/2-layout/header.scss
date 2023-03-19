@@ -106,6 +106,117 @@
   }
 }
 
-@mixin header-1180{
-    
+@mixin header-1180 {
+  .headerSection {
+    &__inner {
+      &-logo {
+        width: 330px;
+      }
+    }
+  }
+}
+@mixin header-1025 {
+  .headerSection {
+    &__inner {
+      &-logo {
+        width: 280px;
+      }
+      .burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: transparent;
+
+        &::before {
+          top: 20%;
+          width: calc(100% - 0.4rem);
+          height: 3px;
+          border-radius: 2px;
+          background-color: $white;
+          transition: all 0.3s ease;
+          content: "";
+          position: absolute;
+          left: 50%;
+          @include transformX;
+        }
+
+        &::after {
+          bottom: 20%;
+          width: calc(100% - 0.4rem);
+          height: 3px;
+          border-radius: 2px;
+          background-color: $white;
+          transition: all 0.3s ease;
+          content: "";
+          position: absolute;
+          left: 50%;
+          @include transformX;
+        }
+
+        &.active {
+          &::before {
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg);
+          }
+
+          &::after {
+            bottom: 50%;
+            -webkit-transform: translate(-50%, 50%) rotate(-45deg);
+            transform: translate(-50%, 50%) rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba($black-bg, 0.8);
+    display: none;
+
+    &__inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40%;
+      height: 100%;
+      max-width: 250px;
+      padding: 25px 15px;
+      background: $white-3;
+      box-shadow: 5px 0 35px 10px rgba($magenta, 0.2);
+
+      //dis
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__item {
+      color: $black-bg;
+      width: 90%;
+      box-sizing: border-box;
+
+      &._dropdown {
+        &::after {
+          top: 0.75em;
+        }
+      }
+      &-dropdown {
+        position: unset;
+        transform: unset;
+        background: transparent;
+        border: 0;
+        transition: 0.2s ease-in-out !important;
+
+        .nav__item {
+          border: 0;
+        }
+      }
+    }
+  }
 }
