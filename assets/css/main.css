@@ -784,13 +784,12 @@ body {
   gap: 0.8em;
   list-style: none;
   border-radius: 1.6em;
-  background: #af34ff;
-  background: linear-gradient(45deg, #511281 0%, #280949 100%);
+  background: rgba(255, 255, 255, 0.9);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0.8em 1.4em;
   margin-bottom: 0.8em;
-  color: #c4c4c4;
+  color: #333;
   font-size: 18px;
   font-weight: 400;
   font-family: "Rubik", sans-serif;
@@ -845,7 +844,7 @@ body {
   position: relative;
   font-weight: 500;
   overflow: hidden;
-  color: #fff;
+  color: #561e99;
 }
 .searchSection__results-item._header > div {
   font-size: 20px;
@@ -1381,6 +1380,12 @@ body {
   .searchSection__search .button {
     height: 60px;
     width: 40%;
+  }
+  .searchSection__results-item {
+    font-size: 16px;
+  }
+  .searchSection__results-item._header > div {
+    font-size: 18px;
   }
   .faqSection__inner-tabs {
     -webkit-box-pack: center;
