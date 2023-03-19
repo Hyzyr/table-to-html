@@ -15,6 +15,7 @@
     padding: 0 25px;
   }
   @include comparisonTable-940;
+  @include search-940;
 }
 @media (max-width: 740px) {
   .autoContainer {
