@@ -258,16 +258,16 @@ body {
 }
 .button--border {
   color: #111;
+  font-weight: 500;
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
-  border: 1px solid #af34ff;
+  border: 1px solid #fff;
   background: transparent;
+  opacity: 0.6;
 }
 .button--border span {
   display: inline-block;
-  background: linear-gradient(45deg, #af34ff, #5159f7, #08a5ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #fff;
 }
 .button--border:hover {
   opacity: 0.8;
@@ -275,6 +275,28 @@ body {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
   background: rgba(175, 52, 255, 0.07);
+}
+.button._icoLeft {
+  position: relative;
+  padding: 0.8em 1em 0.8em 2.4em;
+}
+.button._icoLeft .button__ico {
+  position: absolute;
+  top: 50%;
+  left: 0.8em;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 1em;
+  height: 1em;
+  font-size: inherit;
+}
+.button._icoLeft .button__ico svg {
+  width: 100%;
+  height: 100%;
+}
+.button._icoLeft .button__ico._small {
+  width: 0.8em;
+  height: 0.8em;
 }
 .button:active {
   opacity: 0.6;
@@ -1210,6 +1232,210 @@ body {
   display: flex;
   padding: 90px 0 110px 0;
   gap: 15px;
+}
+
+.createNft {
+  position: relative;
+  padding: 120px 0 80px 0;
+}
+.createNft .button {
+  color: #fff;
+}
+.createNft__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.createNft__bg span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 250px 150px #8427f3;
+          box-shadow: 0 0 250px 150px #8427f3;
+  -webkit-appearance: none;
+}
+.createNft__bg span:nth-child(1) {
+  top: 80%;
+  left: 20%;
+  opacity: 0.3;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+.createNft__bg span:nth-child(2) {
+  bottom: 30%;
+  right: 10%;
+  opacity: 0.4;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+.createNft__bg span:nth-child(3) {
+  top: 20%;
+  left: 22%;
+  opacity: 0.3;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+}
+.createNft__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 60vh;
+}
+.createNft__inner-content {
+  width: calc(100% - 400px - 40px);
+  max-width: 660px;
+}
+.createNft__inner-content-title {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+.createNft__inner-content-title span {
+  background: linear-gradient(30deg, #08a5ff, #af34ff 20%, #af34ff 55%, #08a5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.createNft__inner-banner {
+  position: relative;
+  width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.createNft__inner-banner:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  background-color: transparent;
+  border-radius: 20px;
+  z-index: -1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0 20px 20px 40px rgba(17, 17, 17, 0.8), 0 20px 60px 30px rgba(132, 39, 243, 0.6);
+          box-shadow: 0 20px 20px 40px rgba(17, 17, 17, 0.8), 0 20px 60px 30px rgba(132, 39, 243, 0.6);
+}
+.createNft__actions-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(45deg, #511281 0%, #280949 100%);
+  padding: 0.8em 1.2em;
+  border-radius: 1em;
+  border: 1px solid rgba(175, 52, 255, 0.14);
+  color: #eaeaea;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+.createNft__actions-info strong {
+  font-weight: 700;
+}
+.createNft__actions-info span {
+  color: #af34ff;
+}
+.createNft__actions-picker {
+  margin-bottom: 30px;
+}
+.createNft__actions-picker-title {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+.createNft__actions-picker-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.createNft__actions-picker-items li {
+  cursor: pointer;
+  width: calc(33.3% - 10px);
+  max-width: 130px;
+  border-radius: 10px;
+  background: rgba(132, 39, 243, 0.15);
+  overflow: hidden;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  opacity: 0.6;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.createNft__actions-picker-items li:hover {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.createNft__actions-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px 15px;
+}
+.createNft__img {
+  position: relative;
+  padding-bottom: 100%;
+  pointer-events: none;
+}
+.createNft__img-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.2;
+  letter-spacing: 0.2em;
+}
+.createNft__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.createNft__img img._small {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 @media (max-width: 1180px) {

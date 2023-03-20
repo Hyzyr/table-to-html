@@ -1,0 +1,200 @@
+.createNft {
+  position: relative;
+  padding: 120px 0 80px 0;
+
+  //
+  //   test
+  //   test
+  //   test
+  .button {
+    color: $white;
+  }
+  //   test
+  //   test
+  //   test
+  //
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    span {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      border: 0;
+      border-radius: 50%;
+      box-shadow: 0 0 250px 150px $magenta;
+      -webkit-appearance: none;
+
+      &:nth-child(1) {
+        top: 80%;
+        left: 20%;
+        opacity: 0.3;
+        transform: scale(1.4);
+      }
+      &:nth-child(2) {
+        bottom: 30%;
+        right: 10%;
+        opacity: 0.4;
+        transform: scale(2);
+      }
+      &:nth-child(3) {
+        top: 20%;
+        left: 22%;
+        opacity: 0.3;
+        transform: translateY(-50px);
+      }
+    }
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60vh;
+
+    &-content {
+      width: calc(100% - 400px - 40px);
+      max-width: 660px;
+
+      &-title {
+        //font
+        color: $white;
+        font-size: 36px;
+        font-weight: 700;
+        font-family: $font-secondary;
+        line-height: 1.2;
+        margin-bottom: 40px;
+
+        span {
+          @include textGradient($gradient-light);
+        }
+      }
+    }
+    &-banner {
+      position: relative;
+      width: 400px;
+      border: 1px solid rgba($white, 0.1);
+
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: 80%;
+        background-color: transparent;
+        border-radius: 20px;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 20px 20px 40px rgba($black, 0.8),
+          0 20px 60px 30px rgba($magenta, 0.6);
+      }
+    }
+  }
+  &__actions {
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: $gradient-secondary;
+      padding: 0.8em 1.2em;
+      border-radius: 1em;
+      border: 1px solid rgba($color-2, 0.14);
+
+      //font
+      color: $white-1;
+      font-size: 20px;
+      font-weight: 500;
+      font-family: $font-secondary;
+      line-height: 1.2;
+      margin-bottom: 40px;
+
+      strong {
+        font-weight: 700;
+      }
+      span {
+        color: $color-2;
+      }
+    }
+    &-picker {
+      margin-bottom: 30px;
+
+      &-title {
+        //font
+        color: rgba($white, 0.4);
+        font-size: 18px;
+        font-weight: 400;
+        font-family: $font-secondary;
+        line-height: 1.2;
+        margin-bottom: 0.5em;
+      }
+      &-items {
+        display: flex;
+        gap: 20px;
+
+        li {
+          cursor: pointer;
+          width: calc(33.3% - 10px);
+          max-width: 130px;
+          border-radius: 10px;
+          background: rgba($magenta, 0.15);
+          overflow: hidden;
+          transition: 0.3s ease-in-out;
+          transition-property: opacity, transform;
+          border: 1px solid rgba($white, 0.14);
+          opacity: 0.6;
+          transform: scale(0.9);
+
+          &:hover {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      }
+    }
+    &-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 15px;
+    }
+  }
+  &__img {
+    position: relative;
+    padding-bottom: 100%;
+    pointer-events: none;
+
+    &-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      //font
+      color: $white;
+      font-size: 22px;
+      font-weight: 400;
+      font-family: $font-secondary;
+      line-height: 1.2;
+      letter-spacing: 0.2em;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      &._small {
+        transform: scale(0.7);
+      }
+    }
+  }
+}

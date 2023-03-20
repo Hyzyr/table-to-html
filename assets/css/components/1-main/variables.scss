@@ -40,5 +40,12 @@ $gradient-eth: linear-gradient(
   #7e98ff 37.49%,
   #52e3ff 125.5%
 );
+$gradient-light: linear-gradient(
+  30deg,
+  $color-3,
+  $color-2 20%,
+  $color-2 55%,
+  $color-3
+);
 
 $font-secondary: "Rubik", sans-serif;
