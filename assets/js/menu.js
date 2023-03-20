@@ -13,19 +13,19 @@ menu.onclick = (e) => {
   }
 };
 
-const popup = document.getElementById("popup");
-const popupBtn = document.getElementById("popupBtn");
-const popupClose = document.getElementById("popupClose");
+// const popup = document.getElementById("popup");
+// const popupBtn = document.getElementById("popupBtn");
+// const popupClose = document.getElementById("popupClose");
 
-const togglePopup = () => {
-  document.body.classList.toggle("active");
-  popup.classList.toggle("active");
-  popupBtn.classList.toggle("active");
-};
-popupBtn.onclick = () => togglePopup();
-popupClose.onclick = () => togglePopup();
-popup.onclick = (e) => {
-  if (e.currentTarget === e.srcElement) {
-    togglePopup();
-  }
-};
+// const togglePopup = () => {
+//   document.body.classList.toggle("active");
+//   popup.classList.toggle("active");
+//   popupBtn.classList.toggle("active");
+// };
+// popupBtn.onclick = () => togglePopup();
+// popupClose.onclick = () => togglePopup();
+// popup.onclick = (e) => {
+//   if (e.currentTarget === e.srcElement) {
+//     togglePopup();
+//   }
+// };

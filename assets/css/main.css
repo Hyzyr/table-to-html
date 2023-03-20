@@ -443,7 +443,7 @@ body.active {
   display: none;
 }
 .headerSection + section {
-  padding-top: 110px;
+  margin-top: 110px;
 }
 
 .nav__inner {
@@ -1521,11 +1521,25 @@ body.active {
   margin-bottom: 0;
 }
 .createNft__inner-banner {
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 400px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.createNft__inner-banner:before {
+.createNft__inner-banner-img {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+}
+.createNft__inner-banner-img:before {
   content: "";
   position: absolute;
   display: block;
@@ -1662,6 +1676,80 @@ body.active {
 .createNft__img img._small {
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
+}
+
+.menuSection__inner-title {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.2;
+  margin-bottom: 0.6em;
+}
+.menuSection__inner-butons {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  padding: 0.5em 0.8em;
+  border: 1px solid rgba(175, 52, 255, 0.3);
+  border-radius: 1em;
+  -webkit-box-shadow: 0 10px 15px 5px rgba(17, 17, 17, 0.8);
+          box-shadow: 0 10px 15px 5px rgba(17, 17, 17, 0.8);
+  color: #eaeaea;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.2;
+}
+.menuSection__inner-butons::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  background: linear-gradient(45deg, #511281 0%, #280949 100%);
+  opacity: 0.4;
+  z-index: -1;
+}
+.menuSection__inner-butons .button {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 250px;
+}
+.menuSection__inner-butons .button.active {
+  background: linear-gradient(30deg, #08a5ff, #af34ff 20%, #af34ff 55%, #08a5ff);
+  opacity: 0.9;
+}
+.menuSection__popup {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+  width: 100%;
+  background: linear-gradient(45deg, #511281 0%, #280949 100%);
+  padding: 0.9em 1.3em;
+  border: 1px solid rgba(175, 52, 255, 0.14);
+  border-radius: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 10px 15px 5px rgba(17, 17, 17, 0.3);
+          box-shadow: 0 10px 15px 5px rgba(17, 17, 17, 0.3);
+  z-index: 2;
+  color: #eaeaea;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.2;
 }
 
 @media (max-width: 1180px) {
