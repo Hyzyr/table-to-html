@@ -1266,7 +1266,7 @@ body {
 .createNft__bg span:nth-child(1) {
   bottom: 30%;
   left: 24%;
-  opacity: 0.22;
+  opacity: 0.28;
   -webkit-transform: scale(2.7);
           transform: scale(2.7);
 }
