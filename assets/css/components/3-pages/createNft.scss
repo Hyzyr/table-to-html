@@ -225,7 +225,7 @@
   &.active {
     max-height: 400px;
     overflow: unset;
-    padding: 30px 0;
+    padding: 30px 0 60px 0;
     opacity: 1;
     pointer-events: 0;
     .menuSection__popup {
@@ -243,7 +243,7 @@
       line-height: 1.2;
       margin-bottom: 0.6em;
     }
-    &-butons {
+    &-buttons {
       position: relative;
       display: flex;
       justify-content: space-between;
@@ -357,5 +357,142 @@
     font-weight: 500;
     font-family: $font-secondary;
     line-height: 1.2;
+  }
+}
+
+@mixin createNft-1180 {
+  .createNft {
+    &__inner {
+      &-content {
+        &-title {
+          font-size: 32px;
+        }
+      }
+    }
+    &__actions {
+      &-info {
+        font-size: 18px;
+      }
+    }
+  }
+}
+@mixin createNft-1025 {
+  .createNft {
+    &__inner {
+      &-content {
+        &-title {
+          font-size: 28px;
+        }
+      }
+    }
+    &__actions {
+      &-picker {
+        &-items {
+          li {
+            max-width: 200px;
+          }
+        }
+      }
+      &-buttons {
+        gap: 10px;
+        .button {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+@mixin createNft-940 {
+  .createNft {
+    padding: 60px 0;
+
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+      &-content {
+        width: 100%;
+        margin-bottom: 50px;
+        &-title {
+          margin-bottom: 1.2em;
+          text-align: center;
+        }
+      }
+      &-banner {
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@mixin createNft-740 {
+  .createNft {
+    padding: 60px 0;
+    &__inner {
+      &-content {
+        &-title {
+          font-size: 22px;
+        }
+      }
+    }
+    &__actions {
+      &-info {
+        font-size: 16px;
+      }
+    }
+  }
+  .menuSection {
+    &__inner {
+      &__popup {
+        font-size: 14px;
+      }
+    }
+  }
+}
+@mixin createNft-540 {
+  .createNft {
+    padding: 60px 0;
+    &__inner {
+      &-content {
+        &-title {
+          font-size: 18px;
+        }
+      }
+    }
+    &__actions {
+      &-info {
+        font-size: 14px;
+        font-weight: 500;
+        span {
+          color: $white;
+        }
+        strong {
+          color: $white-3;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .menuSection {
+    &__inner {
+      &-title {
+        font-size: 16px;
+      }
+      &-buttons {
+        padding: 5px 8px;
+        border-radius: 8px;
+        gap: 5px;
+
+        .button {
+          border-radius: 4px;
+          font-size: 14px;
+          padding: 0.6em 0.8em;
+        }
+      }
+    }
+    &__popup {
+      font-size: 14px;
+    }
   }
 }

@@ -316,3 +316,63 @@
     }
   }
 }
+@mixin header-740 {
+  .headerSection {
+    &__inner {
+      & > .button {
+        font-size: 16px;
+      }
+    }
+  }
+  .bread {
+    &__inner {
+      padding: 15px 0;
+      &-button {
+        font-size: 18px;
+      }
+    }
+  }
+}
+@mixin header-540 {
+  .headerSection {
+    &__inner {
+      &-logo {
+        width: 230px;
+      }
+      & > .button {
+        font-size: 14px;
+      }
+    }
+    & + section {
+      margin-top: 90px;
+    }
+  }
+}
+
+@mixin header-480 {
+  .headerSection {
+    &__inner {
+      &-logo {
+        width: 180px;
+      }
+      & > .button {
+        font-size: 12px;
+      }
+    }
+
+    & + section {
+      margin-top: 70px;
+    }
+  }
+  .bread {
+    &__inner {
+      padding: 12px 0;
+      &-button {
+        font-size: 14px;
+        span {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

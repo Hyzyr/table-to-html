@@ -219,6 +219,7 @@ body.active {
   font-style: normal;
   line-height: 1em;
   letter-spacing: -0.02em;
+  text-decoration: none;
 }
 .button--primary {
   position: relative;
@@ -335,6 +336,67 @@ body.active {
           transition-delay: 0s;
   background: rgba(175, 52, 255, 0.07);
 }
+.button._select {
+  position: relative;
+}
+.button._select .button__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: calc(100% + 1px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #11011e;
+  border-radius: inherit;
+  border: 1px solid #08a5ff;
+  padding: 5px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #280949;
+  scrollbar-width: none; /* Firefox 64 */
+  -ms-overflow-style: none; /* Internet Explorer 11 */
+  opacity: 0;
+  pointer-events: 0;
+  overflow: hidden;
+  max-height: 0;
+}
+.button._select .button__dropdown::-webkit-scrollbar {
+  /** WebKit */
+  display: none;
+}
+.button._select .button__dropdown li {
+  padding: 0.5em 0.7em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.2;
+  text-align: left;
+  background: transparent;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.button._select .button__dropdown li:last-child {
+  border: 0;
+}
+.button._select .button__dropdown li:hover {
+  background: #11011e;
+}
+.button._select:hover {
+  z-index: 1;
+}
+.button._select:hover .button__dropdown {
+  max-height: 300px;
+  overflow-y: auto;
+  opacity: 1;
+  pointer-events: all;
+}
 .button._icoLeft {
   position: relative;
   padding: 0.8em 1em 0.8em 2.4em;
@@ -357,6 +419,10 @@ body.active {
 .button._icoLeft .button__ico._small {
   width: 0.8em;
   height: 0.8em;
+}
+.button._icoLeft .button__ico._flipY {
+  -webkit-transform: translateY(-50%) rotateX(180deg);
+          transform: translateY(-50%) rotateX(180deg);
 }
 .button:active {
   opacity: 0.6;
@@ -1690,7 +1756,7 @@ body.active {
 .menuSection.active {
   max-height: 400px;
   overflow: unset;
-  padding: 30px 0;
+  padding: 30px 0 60px 0;
   opacity: 1;
   pointer-events: 0;
 }
@@ -1705,7 +1771,7 @@ body.active {
   line-height: 1.2;
   margin-bottom: 0.6em;
 }
-.menuSection__inner-butons {
+.menuSection__inner-buttons {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1728,7 +1794,7 @@ body.active {
   font-family: "Rubik", sans-serif;
   line-height: 1.2;
 }
-.menuSection__inner-butons::after {
+.menuSection__inner-buttons::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1740,17 +1806,17 @@ body.active {
   opacity: 0.4;
   z-index: -1;
 }
-.menuSection__inner-butons .button {
+.menuSection__inner-buttons .button {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   max-width: 250px;
 }
-.menuSection__inner-butons .button.active {
+.menuSection__inner-buttons .button.active {
   background: linear-gradient(30deg, #08a5ff, #af34ff 20%, #af34ff 55%, #08a5ff);
   opacity: 0.9;
 }
-.menuSection__inner-butons .button:nth-child(1).active ~ .menuSection__popup:nth-child(5) {
+.menuSection__inner-buttons .button:nth-child(1).active ~ .menuSection__popup:nth-child(5) {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1761,7 +1827,7 @@ body.active {
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
 }
-.menuSection__inner-butons .button:nth-child(1):hover ~ .menuSection__popup:not(:nth-child(5)) {
+.menuSection__inner-buttons .button:nth-child(1):hover ~ .menuSection__popup:not(:nth-child(5)) {
   opacity: 0 !important;
   -webkit-transform: scale(0) !important;
           transform: scale(0) !important;
@@ -1770,7 +1836,7 @@ body.active {
   transition: opacity 0.5s ease-out, transform 1.5s ease-out;
   transition: opacity 0.5s ease-out, transform 1.5s ease-out, -webkit-transform 1.5s ease-out;
 }
-.menuSection__inner-butons .button:nth-child(1):hover ~ .menuSection__popup:nth-child(5) {
+.menuSection__inner-buttons .button:nth-child(1):hover ~ .menuSection__popup:nth-child(5) {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1781,7 +1847,7 @@ body.active {
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
 }
-.menuSection__inner-butons .button:nth-child(2).active ~ .menuSection__popup:nth-child(6) {
+.menuSection__inner-buttons .button:nth-child(2).active ~ .menuSection__popup:nth-child(6) {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1792,7 +1858,7 @@ body.active {
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
 }
-.menuSection__inner-butons .button:nth-child(2):hover ~ .menuSection__popup:not(:nth-child(6)) {
+.menuSection__inner-buttons .button:nth-child(2):hover ~ .menuSection__popup:not(:nth-child(6)) {
   opacity: 0 !important;
   -webkit-transform: scale(0) !important;
           transform: scale(0) !important;
@@ -1801,7 +1867,7 @@ body.active {
   transition: opacity 0.5s ease-out, transform 1.5s ease-out;
   transition: opacity 0.5s ease-out, transform 1.5s ease-out, -webkit-transform 1.5s ease-out;
 }
-.menuSection__inner-butons .button:nth-child(2):hover ~ .menuSection__popup:nth-child(6) {
+.menuSection__inner-buttons .button:nth-child(2):hover ~ .menuSection__popup:nth-child(6) {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1812,7 +1878,7 @@ body.active {
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
 }
-.menuSection__inner-butons .button:nth-child(3).active ~ .menuSection__popup:nth-child(7) {
+.menuSection__inner-buttons .button:nth-child(3).active ~ .menuSection__popup:nth-child(7) {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1823,7 +1889,7 @@ body.active {
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
 }
-.menuSection__inner-butons .button:nth-child(3):hover ~ .menuSection__popup:not(:nth-child(7)) {
+.menuSection__inner-buttons .button:nth-child(3):hover ~ .menuSection__popup:not(:nth-child(7)) {
   opacity: 0 !important;
   -webkit-transform: scale(0) !important;
           transform: scale(0) !important;
@@ -1832,7 +1898,7 @@ body.active {
   transition: opacity 0.5s ease-out, transform 1.5s ease-out;
   transition: opacity 0.5s ease-out, transform 1.5s ease-out, -webkit-transform 1.5s ease-out;
 }
-.menuSection__inner-butons .button:nth-child(3):hover ~ .menuSection__popup:nth-child(7) {
+.menuSection__inner-buttons .button:nth-child(3):hover ~ .menuSection__popup:nth-child(7) {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1843,7 +1909,7 @@ body.active {
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
 }
-.menuSection__inner-butons .button:nth-child(4).active ~ .menuSection__popup:nth-child(8) {
+.menuSection__inner-buttons .button:nth-child(4).active ~ .menuSection__popup:nth-child(8) {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1854,7 +1920,7 @@ body.active {
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
 }
-.menuSection__inner-butons .button:nth-child(4):hover ~ .menuSection__popup:not(:nth-child(8)) {
+.menuSection__inner-buttons .button:nth-child(4):hover ~ .menuSection__popup:not(:nth-child(8)) {
   opacity: 0 !important;
   -webkit-transform: scale(0) !important;
           transform: scale(0) !important;
@@ -1863,7 +1929,7 @@ body.active {
   transition: opacity 0.5s ease-out, transform 1.5s ease-out;
   transition: opacity 0.5s ease-out, transform 1.5s ease-out, -webkit-transform 1.5s ease-out;
 }
-.menuSection__inner-butons .button:nth-child(4):hover ~ .menuSection__popup:nth-child(8) {
+.menuSection__inner-buttons .button:nth-child(4):hover ~ .menuSection__popup:nth-child(8) {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1874,16 +1940,16 @@ body.active {
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
 }
-.menuSection__inner-butons:hover .button.active {
+.menuSection__inner-buttons:hover .button.active {
   background: rgba(175, 52, 255, 0.3);
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
 }
-.menuSection__inner-butons:hover .button:hover {
+.menuSection__inner-buttons:hover .button:hover {
   opacity: 0.9;
   background: linear-gradient(30deg, #08a5ff, #af34ff 20%, #af34ff 55%, #08a5ff);
 }
-.menuSection__inner-butons:hover .button:hover + .menuSection__popup {
+.menuSection__inner-buttons:hover .button:hover + .menuSection__popup {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1954,6 +2020,12 @@ body.active {
   }
   .searchSection__search .input__helper .textLink {
     font-size: 14px;
+  }
+  .createNft__inner-content-title {
+    font-size: 32px;
+  }
+  .createNft__actions-info {
+    font-size: 18px;
   }
 }
 @media (max-width: 1025px) {
@@ -2106,6 +2178,18 @@ body.active {
   .comparisonTable__seperator {
     font-size: 20px;
   }
+  .createNft__inner-content-title {
+    font-size: 28px;
+  }
+  .createNft__actions-picker-items li {
+    max-width: 200px;
+  }
+  .createNft__actions-buttons {
+    gap: 10px;
+  }
+  .createNft__actions-buttons .button {
+    font-size: 14px;
+  }
 }
 @media (max-width: 940px) {
   .autoContainer {
@@ -2174,10 +2258,44 @@ body.active {
   .footerSection__inner-links .iconButton {
     padding: 1.5em;
   }
+  .createNft {
+    padding: 60px 0;
+  }
+  .createNft__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .createNft__inner-content {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .createNft__inner-content-title {
+    margin-bottom: 1.2em;
+    text-align: center;
+  }
+  .createNft__inner-banner {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
 }
 @media (max-width: 740px) {
   .autoContainer {
     padding: 0 15px;
+  }
+  .headerSection__inner > .button {
+    font-size: 16px;
+  }
+  .bread__inner {
+    padding: 15px 0;
+  }
+  .bread__inner-button {
+    font-size: 18px;
   }
   .searchSection__search {
     -webkit-column-gap: 20px;
@@ -2366,10 +2484,31 @@ body.active {
   .comparisonTable__seperator:before {
     display: none;
   }
+  .createNft {
+    padding: 60px 0;
+  }
+  .createNft__inner-content-title {
+    font-size: 22px;
+  }
+  .createNft__actions-info {
+    font-size: 16px;
+  }
+  .menuSection__inner__popup {
+    font-size: 14px;
+  }
 }
 @media (max-width: 540px) {
   .autoContainer {
     padding: 0 10px;
+  }
+  .headerSection__inner-logo {
+    width: 230px;
+  }
+  .headerSection__inner > .button {
+    font-size: 14px;
+  }
+  .headerSection + section {
+    margin-top: 90px;
   }
   .searchSection__search {
     -webkit-column-gap: 8px;
@@ -2419,5 +2558,58 @@ body.active {
   }
   .footerSection__inner-links .iconButton {
     font-size: 8px;
+  }
+  .createNft {
+    padding: 60px 0;
+  }
+  .createNft__inner-content-title {
+    font-size: 18px;
+  }
+  .createNft__actions-info {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .createNft__actions-info span {
+    color: #fff;
+  }
+  .createNft__actions-info strong {
+    color: #c4c4c4;
+    font-weight: 400;
+  }
+  .menuSection__inner-title {
+    font-size: 16px;
+  }
+  .menuSection__inner-buttons {
+    padding: 5px 8px;
+    border-radius: 8px;
+    gap: 5px;
+  }
+  .menuSection__inner-buttons .button {
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 0.6em 0.8em;
+  }
+  .menuSection__popup {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .headerSection__inner-logo {
+    width: 180px;
+  }
+  .headerSection__inner > .button {
+    font-size: 12px;
+  }
+  .headerSection + section {
+    margin-top: 70px;
+  }
+  .bread__inner {
+    padding: 12px 0;
+  }
+  .bread__inner-button {
+    font-size: 14px;
+  }
+  .bread__inner-button span {
+    margin-right: 10px;
   }
 }
