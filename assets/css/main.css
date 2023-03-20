@@ -1239,7 +1239,7 @@ body {
 
 .createNft {
   position: relative;
-  padding: 120px 0 80px 0;
+  padding: 150px 0 100px 0;
 }
 .createNft .button {
   color: #fff;
@@ -1302,11 +1302,11 @@ body {
 }
 .createNft__inner-content-title {
   color: #fff;
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 700;
   font-family: "Rubik", sans-serif;
   line-height: 1.2;
-  margin-bottom: 40px;
+  margin-bottom: 1.6em;
 }
 .createNft__inner-content-title span {
   background: linear-gradient(30deg, #08a5ff, #af34ff 20%, #af34ff 55%, #08a5ff);
@@ -1353,7 +1353,7 @@ body {
   font-weight: 500;
   font-family: "Rubik", sans-serif;
   line-height: 1.2;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .createNft__actions-info strong {
   font-weight: 700;
@@ -1362,7 +1362,10 @@ body {
   color: #af34ff;
 }
 .createNft__actions-picker {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+.createNft__actions-picker:last-child {
+  margin-bottom: 0;
 }
 .createNft__actions-picker-title {
   color: rgba(255, 255, 255, 0.4);
