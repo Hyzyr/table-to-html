@@ -1,6 +1,6 @@
 .createNft {
   position: relative;
-  padding: 150px 0 100px 0;
+  padding: 40px 0;
 
   //
   //   test
@@ -63,16 +63,14 @@
       max-width: 660px;
 
       &-title {
-        //font
-        color: $white;
         font-size: 40px;
-        font-weight: 700;
-        font-family: $font-secondary;
-        line-height: 1.2;
+      }
+      .createNft__actions {
+        margin-bottom: 45px;
         margin-bottom: 1.6em;
 
-        span {
-          @include textGradient($gradient-light);
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }
@@ -171,20 +169,27 @@
     position: relative;
     padding-bottom: 100%;
     pointer-events: none;
+    overflow: hidden;
 
     &-text {
       position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      width: 60%;
+      height: 60%;
 
       //font
       color: $white;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 400;
       font-family: $font-secondary;
       line-height: 1.2;
       letter-spacing: 0.2em;
+      text-align: center;
     }
 
     img {

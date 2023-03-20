@@ -181,6 +181,19 @@
         }
       }
     }
+    &._xlg {
+      font-size: 20px;
+      padding: 0;
+
+      span {
+        padding: 0.8em 1.6em;
+      }
+      &:hover {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
   }
   &--shadow {
     box-shadow: 0 5px 50px 5px rgba($black-bg, 0.1);
@@ -269,5 +282,18 @@
     background: rgba($black-bg, 0.25);
     border-color: rgba($white, 0.25);
     box-shadow: inset -5px -10px 20px rgba($magenta, 0.26);
+  }
+}
+.gradientTitle {
+  //font
+  color: $white;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: $font-secondary;
+  line-height: 1.2;
+  margin-bottom: 0.6em;
+
+  span {
+    @include textGradient($gradient-light);
   }
 }
