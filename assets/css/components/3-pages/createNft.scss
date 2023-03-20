@@ -215,6 +215,7 @@
   }
 }
 .menuSection {
+  padding: 30px 0;
   &__inner {
     &-title {
       //font
@@ -259,9 +260,55 @@
         flex-grow: 1;
         max-width: 250px;
 
-        &.active {
-          background: $gradient-light;
+        $buttons-count: 4;
+        @for $i from 1 to $buttons-count + 1 {
+          &:nth-child(#{$i}) {
+            &.active {
+              background: $gradient-light;
+              opacity: 0.9;
+
+              & ~ .menuSection__popup:nth-child(#{$i + $buttons-count}) {
+                opacity: 1 !important;
+                transform: scale(1) !important;
+                pointer-events: all;
+                transition: 0.4s ease-out 0.15s;
+                transition-property: opacity, transform;
+              }
+            }
+
+            &:hover {
+              background: $gradient-light;
+              opacity: 0.9;
+
+              & ~ .menuSection__popup:not(:nth-child(#{$i + $buttons-count})) {
+                opacity: 0 !important;
+                transform: scale(0) !important;
+                pointer-events: none !important;
+              }
+
+              & ~ .menuSection__popup:nth-child(#{$i + $buttons-count}) {
+                opacity: 1 !important;
+                transform: scale(1) !important;
+                pointer-events: all;
+                transition: 0.4s ease-out 0.15s;
+                transition-property: opacity, transform;
+              }
+            }
+          }
+        }
+      }
+      &:hover {
+        .button:hover {
           opacity: 0.9;
+          background: $gradient-light;
+
+          & + .menuSection__popup {
+            opacity: 1 !important;
+            transform: scale(1) !important;
+            pointer-events: all;
+            transition: 0.4s ease-out 0.15s;
+            transition-property: opacity, transform;
+          }
         }
       }
     }
@@ -278,6 +325,10 @@
     box-sizing: border-box;
     box-shadow: 0 10px 15px 5px rgba($black, 0.3);
     z-index: 2;
+    opacity: 0;
+    transform: scale(0);
+    pointer-events: none;
+    transition: opacity 0.5s ease-out, transform 1.5s ease-out;
 
     //font
     color: $white-1;
