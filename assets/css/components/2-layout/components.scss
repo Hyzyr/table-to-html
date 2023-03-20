@@ -204,6 +204,7 @@
     span {
       display: inline-block;
       color: $white;
+      transition: inherit;
       // @include textGradient($gradient-1-reverse);
     }
 
@@ -229,6 +230,7 @@
       font-size: inherit;
 
       svg {
+        color: inherit;
         width: 100%;
         height: 100%;
       }
