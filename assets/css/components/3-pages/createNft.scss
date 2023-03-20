@@ -215,7 +215,24 @@
   }
 }
 .menuSection {
-  padding: 30px 0;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  transition: 0.3s ease-out;
+  opacity: 0;
+  pointer-events: 0;
+
+  &.active {
+    max-height: 400px;
+    overflow: unset;
+    padding: 30px 0;
+    opacity: 1;
+    pointer-events: 0;
+    .menuSection__popup {
+      display: block;
+    }
+  }
+
   &__inner {
     &-title {
       //font
@@ -261,35 +278,32 @@
         max-width: 250px;
 
         $buttons-count: 4;
+
+        &.active {
+          background: $gradient-light;
+          opacity: 0.9;
+        }
         @for $i from 1 to $buttons-count + 1 {
           &:nth-child(#{$i}) {
             &.active {
-              background: $gradient-light;
-              opacity: 0.9;
-
               & ~ .menuSection__popup:nth-child(#{$i + $buttons-count}) {
-                opacity: 1 !important;
-                transform: scale(1) !important;
-                pointer-events: all;
+                opacity: 1;
+                transform: scale(1);
                 transition: 0.4s ease-out 0.15s;
                 transition-property: opacity, transform;
               }
             }
 
             &:hover {
-              background: $gradient-light;
-              opacity: 0.9;
-
               & ~ .menuSection__popup:not(:nth-child(#{$i + $buttons-count})) {
                 opacity: 0 !important;
                 transform: scale(0) !important;
-                pointer-events: none !important;
+                transition: opacity 0.5s ease-out, transform 1.5s ease-out;
               }
 
               & ~ .menuSection__popup:nth-child(#{$i + $buttons-count}) {
-                opacity: 1 !important;
-                transform: scale(1) !important;
-                pointer-events: all;
+                opacity: 1;
+                transform: scale(1);
                 transition: 0.4s ease-out 0.15s;
                 transition-property: opacity, transform;
               }
@@ -298,22 +312,29 @@
         }
       }
       &:hover {
-        .button:hover {
-          opacity: 0.9;
-          background: $gradient-light;
+        .button {
+          &.active {
+            background: rgba($color-2, 0.3);
+            transition-delay: 0.2s;
+          }
+          &:hover {
+            opacity: 0.9;
+            background: $gradient-light;
 
-          & + .menuSection__popup {
-            opacity: 1 !important;
-            transform: scale(1) !important;
-            pointer-events: all;
-            transition: 0.4s ease-out 0.15s;
-            transition-property: opacity, transform;
+            & + .menuSection__popup {
+              opacity: 1;
+              transform: scale(1);
+              pointer-events: all;
+              transition: 0.4s ease-out 0.15s;
+              transition-property: opacity, transform;
+            }
           }
         }
       }
     }
   }
   &__popup {
+    display: none;
     position: absolute;
     left: 0;
     top: calc(100% + 10px);
@@ -329,7 +350,7 @@
     transform: scale(0);
     pointer-events: none;
     transition: opacity 0.5s ease-out, transform 1.5s ease-out;
-
+    animation: 0.3s ease fadeIn 0.4s backwards;
     //font
     color: $white-1;
     font-size: 18px;

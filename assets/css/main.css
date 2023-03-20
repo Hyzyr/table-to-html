@@ -1679,7 +1679,23 @@ body.active {
 }
 
 .menuSection {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  opacity: 0;
+  pointer-events: 0;
+}
+.menuSection.active {
+  max-height: 400px;
+  overflow: unset;
   padding: 30px 0;
+  opacity: 1;
+  pointer-events: 0;
+}
+.menuSection.active .menuSection__popup {
+  display: block;
 }
 .menuSection__inner-title {
   color: rgba(255, 255, 255, 0.6);
@@ -1730,166 +1746,147 @@ body.active {
           flex-grow: 1;
   max-width: 250px;
 }
-.menuSection__inner-butons .button:nth-child(1).active {
+.menuSection__inner-butons .button.active {
   background: linear-gradient(30deg, #08a5ff, #af34ff 20%, #af34ff 55%, #08a5ff);
   opacity: 0.9;
 }
 .menuSection__inner-butons .button:nth-child(1).active ~ .menuSection__popup:nth-child(5) {
-  opacity: 1 !important;
-  -webkit-transform: scale(1) !important;
-          transform: scale(1) !important;
-  pointer-events: all;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: 0.4s ease-out 0.15s;
   transition: 0.4s ease-out 0.15s;
   -webkit-transition-property: opacity, -webkit-transform;
   transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
-}
-.menuSection__inner-butons .button:nth-child(1):hover {
-  background: linear-gradient(30deg, #08a5ff, #af34ff 20%, #af34ff 55%, #08a5ff);
-  opacity: 0.9;
 }
 .menuSection__inner-butons .button:nth-child(1):hover ~ .menuSection__popup:not(:nth-child(5)) {
   opacity: 0 !important;
   -webkit-transform: scale(0) !important;
           transform: scale(0) !important;
-  pointer-events: none !important;
+  -webkit-transition: opacity 0.5s ease-out, -webkit-transform 1.5s ease-out;
+  transition: opacity 0.5s ease-out, -webkit-transform 1.5s ease-out;
+  transition: opacity 0.5s ease-out, transform 1.5s ease-out;
+  transition: opacity 0.5s ease-out, transform 1.5s ease-out, -webkit-transform 1.5s ease-out;
 }
 .menuSection__inner-butons .button:nth-child(1):hover ~ .menuSection__popup:nth-child(5) {
-  opacity: 1 !important;
-  -webkit-transform: scale(1) !important;
-          transform: scale(1) !important;
-  pointer-events: all;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: 0.4s ease-out 0.15s;
   transition: 0.4s ease-out 0.15s;
   -webkit-transition-property: opacity, -webkit-transform;
   transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
-}
-.menuSection__inner-butons .button:nth-child(2).active {
-  background: linear-gradient(30deg, #08a5ff, #af34ff 20%, #af34ff 55%, #08a5ff);
-  opacity: 0.9;
 }
 .menuSection__inner-butons .button:nth-child(2).active ~ .menuSection__popup:nth-child(6) {
-  opacity: 1 !important;
-  -webkit-transform: scale(1) !important;
-          transform: scale(1) !important;
-  pointer-events: all;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: 0.4s ease-out 0.15s;
   transition: 0.4s ease-out 0.15s;
   -webkit-transition-property: opacity, -webkit-transform;
   transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
-}
-.menuSection__inner-butons .button:nth-child(2):hover {
-  background: linear-gradient(30deg, #08a5ff, #af34ff 20%, #af34ff 55%, #08a5ff);
-  opacity: 0.9;
 }
 .menuSection__inner-butons .button:nth-child(2):hover ~ .menuSection__popup:not(:nth-child(6)) {
   opacity: 0 !important;
   -webkit-transform: scale(0) !important;
           transform: scale(0) !important;
-  pointer-events: none !important;
+  -webkit-transition: opacity 0.5s ease-out, -webkit-transform 1.5s ease-out;
+  transition: opacity 0.5s ease-out, -webkit-transform 1.5s ease-out;
+  transition: opacity 0.5s ease-out, transform 1.5s ease-out;
+  transition: opacity 0.5s ease-out, transform 1.5s ease-out, -webkit-transform 1.5s ease-out;
 }
 .menuSection__inner-butons .button:nth-child(2):hover ~ .menuSection__popup:nth-child(6) {
-  opacity: 1 !important;
-  -webkit-transform: scale(1) !important;
-          transform: scale(1) !important;
-  pointer-events: all;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: 0.4s ease-out 0.15s;
   transition: 0.4s ease-out 0.15s;
   -webkit-transition-property: opacity, -webkit-transform;
   transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
-}
-.menuSection__inner-butons .button:nth-child(3).active {
-  background: linear-gradient(30deg, #08a5ff, #af34ff 20%, #af34ff 55%, #08a5ff);
-  opacity: 0.9;
 }
 .menuSection__inner-butons .button:nth-child(3).active ~ .menuSection__popup:nth-child(7) {
-  opacity: 1 !important;
-  -webkit-transform: scale(1) !important;
-          transform: scale(1) !important;
-  pointer-events: all;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: 0.4s ease-out 0.15s;
   transition: 0.4s ease-out 0.15s;
   -webkit-transition-property: opacity, -webkit-transform;
   transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
-}
-.menuSection__inner-butons .button:nth-child(3):hover {
-  background: linear-gradient(30deg, #08a5ff, #af34ff 20%, #af34ff 55%, #08a5ff);
-  opacity: 0.9;
 }
 .menuSection__inner-butons .button:nth-child(3):hover ~ .menuSection__popup:not(:nth-child(7)) {
   opacity: 0 !important;
   -webkit-transform: scale(0) !important;
           transform: scale(0) !important;
-  pointer-events: none !important;
+  -webkit-transition: opacity 0.5s ease-out, -webkit-transform 1.5s ease-out;
+  transition: opacity 0.5s ease-out, -webkit-transform 1.5s ease-out;
+  transition: opacity 0.5s ease-out, transform 1.5s ease-out;
+  transition: opacity 0.5s ease-out, transform 1.5s ease-out, -webkit-transform 1.5s ease-out;
 }
 .menuSection__inner-butons .button:nth-child(3):hover ~ .menuSection__popup:nth-child(7) {
-  opacity: 1 !important;
-  -webkit-transform: scale(1) !important;
-          transform: scale(1) !important;
-  pointer-events: all;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: 0.4s ease-out 0.15s;
   transition: 0.4s ease-out 0.15s;
   -webkit-transition-property: opacity, -webkit-transform;
   transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
-}
-.menuSection__inner-butons .button:nth-child(4).active {
-  background: linear-gradient(30deg, #08a5ff, #af34ff 20%, #af34ff 55%, #08a5ff);
-  opacity: 0.9;
 }
 .menuSection__inner-butons .button:nth-child(4).active ~ .menuSection__popup:nth-child(8) {
-  opacity: 1 !important;
-  -webkit-transform: scale(1) !important;
-          transform: scale(1) !important;
-  pointer-events: all;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: 0.4s ease-out 0.15s;
   transition: 0.4s ease-out 0.15s;
   -webkit-transition-property: opacity, -webkit-transform;
   transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
-}
-.menuSection__inner-butons .button:nth-child(4):hover {
-  background: linear-gradient(30deg, #08a5ff, #af34ff 20%, #af34ff 55%, #08a5ff);
-  opacity: 0.9;
 }
 .menuSection__inner-butons .button:nth-child(4):hover ~ .menuSection__popup:not(:nth-child(8)) {
   opacity: 0 !important;
   -webkit-transform: scale(0) !important;
           transform: scale(0) !important;
-  pointer-events: none !important;
+  -webkit-transition: opacity 0.5s ease-out, -webkit-transform 1.5s ease-out;
+  transition: opacity 0.5s ease-out, -webkit-transform 1.5s ease-out;
+  transition: opacity 0.5s ease-out, transform 1.5s ease-out;
+  transition: opacity 0.5s ease-out, transform 1.5s ease-out, -webkit-transform 1.5s ease-out;
 }
 .menuSection__inner-butons .button:nth-child(4):hover ~ .menuSection__popup:nth-child(8) {
-  opacity: 1 !important;
-  -webkit-transform: scale(1) !important;
-          transform: scale(1) !important;
-  pointer-events: all;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: 0.4s ease-out 0.15s;
   transition: 0.4s ease-out 0.15s;
   -webkit-transition-property: opacity, -webkit-transform;
   transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
+}
+.menuSection__inner-butons:hover .button.active {
+  background: rgba(175, 52, 255, 0.3);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 .menuSection__inner-butons:hover .button:hover {
   opacity: 0.9;
   background: linear-gradient(30deg, #08a5ff, #af34ff 20%, #af34ff 55%, #08a5ff);
 }
 .menuSection__inner-butons:hover .button:hover + .menuSection__popup {
-  opacity: 1 !important;
-  -webkit-transform: scale(1) !important;
-          transform: scale(1) !important;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   pointer-events: all;
   -webkit-transition: 0.4s ease-out 0.15s;
   transition: 0.4s ease-out 0.15s;
@@ -1899,6 +1896,7 @@ body.active {
   transition-property: opacity, transform, -webkit-transform;
 }
 .menuSection__popup {
+  display: none;
   position: absolute;
   left: 0;
   top: calc(100% + 10px);
@@ -1920,6 +1918,8 @@ body.active {
   transition: opacity 0.5s ease-out, -webkit-transform 1.5s ease-out;
   transition: opacity 0.5s ease-out, transform 1.5s ease-out;
   transition: opacity 0.5s ease-out, transform 1.5s ease-out, -webkit-transform 1.5s ease-out;
+  -webkit-animation: 0.3s ease fadeIn 0.4s backwards;
+          animation: 0.3s ease fadeIn 0.4s backwards;
   color: #eaeaea;
   font-size: 18px;
   font-weight: 500;
