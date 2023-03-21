@@ -1630,9 +1630,6 @@ body.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1649,6 +1646,7 @@ body.active {
 }
 .createNft__actions-info strong {
   font-weight: 700;
+  margin-right: 1em;
 }
 .createNft__actions-picker {
   margin-bottom: 20px;
