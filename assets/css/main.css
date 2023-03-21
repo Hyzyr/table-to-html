@@ -84,6 +84,26 @@ body.active {
   overflow: hidden;
 }
 
+.mainContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Rubik", sans-serif;
+}
+.mainContainer ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
@@ -530,6 +550,12 @@ body.active {
 }
 .headerSection__inner .burger {
   display: none;
+}
+.headerSection__inner-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
 }
 .headerSection + section {
   margin-top: 110px;
@@ -1000,19 +1026,6 @@ body.active {
   display: block;
 }
 
-.mainContainer {
-  overflow: hidden;
-  min-height: 100%;
-  color: #fff;
-  font-size: 14px;
-  font-family: "Rubik", sans-serif;
-}
-.mainContainer ul {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-}
-
 .searchSection {
   position: relative;
   min-height: 40vh;
@@ -1423,6 +1436,7 @@ body.active {
 }
 
 .footerSection {
+  margin-top: auto;
   position: relative;
   padding: 50px 0 20px 0;
 }
@@ -1575,7 +1589,6 @@ body.active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-height: 60vh;
 }
 .createNft__inner-content {
   width: calc(100% - 400px - 40px);
@@ -1716,6 +1729,9 @@ body.active {
   background: linear-gradient(90deg, #968cff -16.5%, #7e98ff 37.49%, #52e3ff 125.5%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.createNft__actions-title._lg {
+  font-size: 22px;
 }
 .createNft__img {
   position: relative;

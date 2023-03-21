@@ -23,6 +23,10 @@
     .burger {
       display: none;
     }
+    &-group {
+      display: flex;
+      gap: 15px;
+    }
   }
 
   & + section {

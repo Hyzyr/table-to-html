@@ -20,6 +20,21 @@ body {
     overflow: hidden;
   }
 }
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
+  color: $white;
+  font-size: 14px;
+  font-family: $font-secondary;
+
+  ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+  }
+}
 
 /* width */
 ::-webkit-scrollbar {

@@ -1,16 +1,3 @@
-.mainContainer {
-  overflow: hidden;
-  min-height: 100%;
-  color: $white;
-  font-size: 14px;
-  font-family: $font-secondary;
-
-  ul {
-    list-style: none;
-    padding: 0px;
-    margin: 0px;
-  }
-}
 .searchSection {
   position: relative;
   min-height: 40vh;
@@ -409,6 +396,7 @@
   }
 }
 .footerSection {
+  margin-top: auto;
   position: relative;
   padding: 50px 0 20px 0;
 
