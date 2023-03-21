@@ -557,6 +557,9 @@ body.active {
   display: flex;
   gap: 15px;
 }
+.headerSection__inner-group .button {
+  min-width: 185px;
+}
 .headerSection + section {
   margin-top: 110px;
 }
