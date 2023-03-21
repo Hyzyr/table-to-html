@@ -132,15 +132,7 @@
       &:last-child {
         margin-bottom: 0;
       }
-      &-title {
-        //font
-        color: rgba($white, 0.4);
-        font-size: 18px;
-        font-weight: 400;
-        font-family: $font-secondary;
-        line-height: 1.2;
-        margin-bottom: 0.5em;
-      }
+
       &-items {
         display: flex;
         justify-content: space-between;
@@ -183,6 +175,19 @@
 
       .button {
         flex-grow: 1;
+      }
+    }
+    &-title {
+      //font
+      color: rgba($white, 0.4);
+      font-size: 18px;
+      font-weight: 400;
+      font-family: $font-secondary;
+      line-height: 1.2;
+      margin-bottom: 0.5em;
+
+      span {
+        @include textGradient($gradient-eth);
       }
     }
   }
