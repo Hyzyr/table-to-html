@@ -84,6 +84,29 @@ body.active {
   overflow: hidden;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #11011e;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(175, 52, 255, 0.1);
+  border-radius: 10px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(175, 52, 255, 0.3);
+}
+
 .autoContainer {
   max-width: 1340px;
   margin: 0 auto;
@@ -616,46 +639,28 @@ body.active {
   padding: 20px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
-.bread__inner-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: transparent;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-  font-size: 20px;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.6);
-}
-.bread__inner-button span {
+.bread__inner .button--primary span {
   position: relative;
-  margin-right: 15px;
-  width: 1.8em;
-  height: 1.8em;
-  border-radius: 50%;
-  background: linear-gradient(45deg, #af34ff 0.52%, #5159f7 49.52%, #08a5ff 99.54%);
-  color: #fff;
+  padding-left: 2.2em;
+  padding-right: 1.5em;
 }
-.bread__inner-button span::after {
+.bread__inner .button--primary span::after {
   position: absolute;
   content: "";
   display: block;
   top: 50%;
-  left: 50%;
+  left: 1em;
   width: 0.3em;
   height: 0.3em;
   border-bottom: 3px solid currentColor;
   border-right: 3px solid currentColor;
   z-index: 1;
-  -webkit-transform: translate(-50%, -50%) rotate(135deg);
-          transform: translate(-50%, -50%) rotate(135deg);
+  -webkit-transform: translateY(-50%) rotate(135deg);
+          transform: translateY(-50%) rotate(135deg);
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
-.bread__inner-button:hover {
+.bread__inner .button--primary:hover {
   color: white;
 }
 
@@ -1574,7 +1579,7 @@ body.active {
 }
 .createNft__inner-content {
   width: calc(100% - 400px - 40px);
-  max-width: 660px;
+  max-width: 620px;
 }
 .createNft__inner-content-title {
   font-size: 40px;
@@ -1691,6 +1696,12 @@ body.active {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
+.createNft__actions-picker-items li.active {
+  opacity: 1;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
 .createNft__actions-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1698,6 +1709,11 @@ body.active {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 10px 15px;
+}
+.createNft__actions-buttons .button {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .createNft__img {
   position: relative;
@@ -2283,6 +2299,21 @@ body.active {
     max-width: 500px;
     margin: 0 auto;
   }
+  .createNft__actions-buttons .button {
+    font-size: 12px;
+  }
+  .createNft__actions-buttons ._select {
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+    width: 100%;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .createNft__actions-buttons ._select span {
+    display: block;
+  }
 }
 @media (max-width: 740px) {
   .autoContainer {
@@ -2575,6 +2606,25 @@ body.active {
   .createNft__actions-info strong {
     color: #c4c4c4;
     font-weight: 400;
+  }
+  .createNft__actions-buttons .button:not(._select) {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 0px;
+            flex: 1 0 0;
+    padding: 0.8em;
+  }
+  .createNft__actions-buttons .button:not(._select) .button__ico {
+    position: unset;
+    margin: 0;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+  .createNft__actions-buttons .button:not(._select) .button__ico._flipY {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  .createNft__actions-buttons .button:not(._select) span {
+    display: none;
   }
   .menuSection__inner-title {
     font-size: 16px;

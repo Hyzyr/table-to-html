@@ -20,3 +20,25 @@ body {
     overflow: hidden;
   }
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $black-bg;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba($color: $color-2, $alpha: 0.1);
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($color: $color-2, $alpha: 0.3);
+}

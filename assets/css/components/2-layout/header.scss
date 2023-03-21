@@ -129,38 +129,24 @@
     padding: 20px 0;
     border-bottom: 1px solid rgba($white, 0.08);
 
-    &-button {
-      display: flex;
-      align-items: center;
-      background: transparent;
-      transition: 0.3s ease-out;
-
-      //font
-      font-size: 20px;
-      text-decoration: none;
-      color: rgba($white, 0.6);
-
+    .button--primary {
       span {
         position: relative;
-        margin-right: 15px;
-        width: 1.8em;
-        height: 1.8em;
-        border-radius: 50%;
-        background: $gradient-primary;
-        color: $white;
+        padding-left: 2.2em;
+        padding-right: 1.5em;
 
         &::after {
           position: absolute;
           content: "";
           display: block;
           top: 50%;
-          left: 50%;
+          left: 1em;
           width: 0.3em;
           height: 0.3em;
           border-bottom: 3px solid currentColor;
           border-right: 3px solid currentColor;
           z-index: 1;
-          transform: translate(-50%, -50%) rotate(135deg);
+          transform: translateY(-50%) rotate(135deg);
           transition: 0.2s ease;
         }
       }
