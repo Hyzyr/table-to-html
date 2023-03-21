@@ -26,7 +26,7 @@
     &-group {
       display: flex;
       gap: 15px;
-      .button{
+      .button {
         min-width: 185px;
       }
     }
@@ -226,6 +226,11 @@
           }
         }
       }
+      &-group {
+        .button {
+          min-width: unset;
+        }
+      }
     }
   }
   .nav {
@@ -312,8 +317,14 @@
 @mixin header-740 {
   .headerSection {
     &__inner {
-      & > .button {
-        font-size: 16px;
+      &-logo {
+        width: 250px;
+      }
+      &-group {
+        .button {
+          min-width: unset;
+          font-size: 14px;
+        }
       }
     }
   }
@@ -332,8 +343,8 @@
       &-logo {
         width: 230px;
       }
-      & > .button {
-        font-size: 14px;
+      &-group {
+        gap: 8px;
       }
     }
     & + section {
@@ -348,8 +359,13 @@
       &-logo {
         width: 180px;
       }
-      & > .button {
-        font-size: 12px;
+      &-group {
+        .button {
+          font-size: 12px;
+          span {
+            padding: 0.8em 0.6em;
+          }
+        }
       }
     }
 

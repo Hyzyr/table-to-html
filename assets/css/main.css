@@ -358,7 +358,7 @@ body.active {
   opacity: 0.9;
 }
 .button--border {
-  color: #111;
+  color: #fff;
   font-weight: 500;
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
@@ -1548,9 +1548,6 @@ body.active {
   position: relative;
   padding: 40px 0;
 }
-.createNft .button {
-  color: #fff;
-}
 .createNft__bg {
   position: absolute;
   top: 0;
@@ -1608,13 +1605,6 @@ body.active {
 }
 .createNft__inner-content-title {
   font-size: 40px;
-}
-.createNft__inner-content .createNft__actions {
-  margin-bottom: 45px;
-  margin-bottom: 1.6em;
-}
-.createNft__inner-content .createNft__actions:last-child {
-  margin-bottom: 0;
 }
 .createNft__inner-banner {
   display: -webkit-box;
@@ -1734,7 +1724,7 @@ body.active {
   font-weight: 400;
   font-family: "Rubik", sans-serif;
   line-height: 1.2;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em;
 }
 .createNft__actions-title span {
   background: -webkit-gradient(linear, left top, right top, color-stop(-16.5%, #968cff), color-stop(37.49%, #7e98ff), color-stop(125.5%, #52e3ff));
@@ -2132,6 +2122,9 @@ body.active {
     -webkit-transform: translate(-50%, 50%) rotate(-45deg);
     transform: translate(-50%, 50%) rotate(-45deg);
   }
+  .headerSection__inner-group .button {
+    min-width: unset;
+  }
   .nav {
     position: fixed;
     top: 0;
@@ -2349,8 +2342,12 @@ body.active {
   .autoContainer {
     padding: 0 15px;
   }
-  .headerSection__inner > .button {
-    font-size: 16px;
+  .headerSection__inner-logo {
+    width: 250px;
+  }
+  .headerSection__inner-group .button {
+    min-width: unset;
+    font-size: 14px;
   }
   .bread__inner {
     padding: 15px 0;
@@ -2554,6 +2551,12 @@ body.active {
   .createNft__actions-info {
     font-size: 16px;
   }
+  .createNft__actions-title {
+    font-size: 16px;
+  }
+  .createNft__actions-title._lg {
+    font-size: 18px;
+  }
   .menuSection__inner__popup {
     font-size: 14px;
   }
@@ -2565,8 +2568,8 @@ body.active {
   .headerSection__inner-logo {
     width: 230px;
   }
-  .headerSection__inner > .button {
-    font-size: 14px;
+  .headerSection__inner-group {
+    gap: 8px;
   }
   .headerSection + section {
     margin-top: 90px;
@@ -2677,8 +2680,11 @@ body.active {
   .headerSection__inner-logo {
     width: 180px;
   }
-  .headerSection__inner > .button {
+  .headerSection__inner-group .button {
     font-size: 12px;
+  }
+  .headerSection__inner-group .button span {
+    padding: 0.8em 0.6em;
   }
   .headerSection + section {
     margin-top: 70px;

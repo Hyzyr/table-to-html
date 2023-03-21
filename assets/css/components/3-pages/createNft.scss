@@ -2,18 +2,6 @@
   position: relative;
   padding: 40px 0;
 
-  //
-  //   test
-  //   test
-  //   test
-  .button {
-    color: $white;
-  }
-  //   test
-  //   test
-  //   test
-  //
-
   &__bg {
     position: absolute;
     top: 0;
@@ -63,14 +51,6 @@
 
       &-title {
         font-size: 40px;
-      }
-      .createNft__actions {
-        margin-bottom: 45px;
-        margin-bottom: 1.6em;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
       }
     }
     &-banner {
@@ -183,7 +163,7 @@
       font-weight: 400;
       font-family: $font-secondary;
       line-height: 1.2;
-      margin-bottom: 0.5em;
+      margin-bottom: 0.6em;
 
       span {
         @include textGradient($gradient-eth);
@@ -474,6 +454,13 @@
     &__actions {
       &-info {
         font-size: 16px;
+      }
+
+      &-title {
+        font-size: 16px;
+        &._lg {
+          font-size: 18px;
+        }
       }
     }
   }
