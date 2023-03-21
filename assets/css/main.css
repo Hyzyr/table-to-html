@@ -1606,6 +1606,21 @@ body.active {
 .createNft__inner-content-title {
   font-size: 40px;
 }
+.createNft__inner-content-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  margin-top: 40px;
+}
+.createNft__inner-content-footer .button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+}
+.createNft__inner-content._center {
+  margin: 0 auto;
+}
 .createNft__inner-banner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2548,6 +2563,12 @@ body.active {
   .createNft__inner-content-title {
     font-size: 22px;
   }
+  .createNft__inner-content-footer {
+    margin-top: 30px;
+  }
+  .createNft__inner-content-footer .button {
+    font-size: 16px;
+  }
   .createNft__actions-info {
     font-size: 16px;
   }
@@ -2628,6 +2649,14 @@ body.active {
   }
   .createNft__inner-content-title {
     font-size: 18px;
+  }
+  .createNft__inner-content-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 25px;
+    gap: 10px;
   }
   .createNft__actions-info {
     font-size: 14px;

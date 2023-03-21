@@ -52,6 +52,18 @@
       &-title {
         font-size: 40px;
       }
+      &-footer {
+        display: flex;
+        gap: 15px;
+        margin-top: 40px;
+
+        .button {
+          flex: 1 0 0;
+        }
+      }
+      &._center {
+        margin: 0 auto;
+      }
     }
     &-banner {
       display: flex;
@@ -449,8 +461,16 @@
         &-title {
           font-size: 22px;
         }
+        &-footer {
+          margin-top: 30px;
+
+          .button {
+            font-size: 16px;
+          }
+        }
       }
     }
+
     &__actions {
       &-info {
         font-size: 16px;
@@ -479,6 +499,11 @@
       &-content {
         &-title {
           font-size: 18px;
+        }
+        &-footer {
+          flex-direction: column;
+          margin-top: 25px;
+          gap: 10px;
         }
       }
     }
