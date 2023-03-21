@@ -2071,6 +2071,9 @@ body.active {
   .headerSection__inner-logo {
     width: 280px;
   }
+  .headerSection__inner-group .button {
+    min-width: unset;
+  }
   .headerSection__inner .burger {
     display: block;
     position: relative;
@@ -2121,9 +2124,6 @@ body.active {
     bottom: 50%;
     -webkit-transform: translate(-50%, 50%) rotate(-45deg);
     transform: translate(-50%, 50%) rotate(-45deg);
-  }
-  .headerSection__inner-group .button {
-    min-width: unset;
   }
   .nav {
     position: fixed;

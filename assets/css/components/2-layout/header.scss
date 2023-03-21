@@ -179,6 +179,11 @@
       &-logo {
         width: 280px;
       }
+      &-group {
+        .button {
+          min-width: unset;
+        }
+      }
       .burger {
         display: block;
         position: relative;
@@ -224,11 +229,6 @@
             -webkit-transform: translate(-50%, 50%) rotate(-45deg);
             transform: translate(-50%, 50%) rotate(-45deg);
           }
-        }
-      }
-      &-group {
-        .button {
-          min-width: unset;
         }
       }
     }
