@@ -351,7 +351,7 @@ body.active {
   opacity: 1;
 }
 .button--primary.color--green span {
-  background: linear-gradient(45deg, #00a58c, #076a5b);
+  background: linear-gradient(45deg, #609e05, #66d408, #00a58c);
 }
 .button--shadow {
   -webkit-box-shadow: 0 5px 50px 5px rgba(17, 1, 30, 0.1);

@@ -14,6 +14,8 @@ $color-3: #08a5ff;
 $color-4: #f72585;
 $color-5: #e58906;
 $green: #00a58c;
+$green-1: #609e05;
+$green-2: #66d408;
 
 $gradient-1: linear-gradient(45deg, $color-1, $color-2);
 $gradient-1-reverse: linear-gradient(45deg, $color-2, $color-1, $color-3);
@@ -29,11 +31,7 @@ $gradient-secondary-reverse: linear-gradient(
   rgba(81, 18, 129, 0),
   #511281
 );
-$gradient-green: linear-gradient(
-  45deg,
-  $green,
-  mix($green, $black, 60%),
-);
+$gradient-green: linear-gradient(45deg, $green-1, $green-2, $green);
 $gradient-secondary: linear-gradient(
   45deg,
   #511281 0%,
