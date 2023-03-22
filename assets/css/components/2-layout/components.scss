@@ -107,6 +107,7 @@
   line-height: 1em;
   letter-spacing: -0.02em;
   text-decoration: none;
+  text-align: center;
 
   &--primary {
     position: relative;
@@ -232,6 +233,7 @@
   }
   &._select {
     position: relative;
+    min-width: 210px;
 
     .button__dropdown {
       position: absolute;
@@ -275,8 +277,9 @@
       }
     }
 
-    &:hover {
+    &.active {
       z-index: 1;
+      opacity: 0.9;
       .button__dropdown {
         max-height: 300px;
         overflow-y: auto;
@@ -315,6 +318,10 @@
   }
   &:active {
     opacity: 0.6;
+  }
+  &.active {
+    opacity: 1 !important;
+    z-index: 1;
   }
 }
 .iconButton {

@@ -17,52 +17,301 @@
             <div class="headerSection__inner-logo">
               <img src="assets/images/logo.svg" alt="" />
             </div>
-            <div class="headerSection__inner-group">
-              <a href="/" class="button button--primary _xlg"
-                ><span>Back</span></a
-              >
+            <div class="headerSection__inner-nav nav" id="menu">
+              <div class="nav__inner">
+                <div class="nav__inner-logo">
+                  <img src="assets/images/logo-black.svg" alt="" />
+                </div>
+                <div class="nav__item _dropdown">
+                  Investors
+                  <div class="nav__item-dropdown">
+                    <div class="nav__item">item 1</div>
+                    <div class="nav__item">item 2</div>
+                    <div class="nav__item">item 3</div>
+                  </div>
+                </div>
+                <div class="nav__item _dropdown">
+                  Docs
+                  <div class="nav__item-dropdown">
+                    <div class="nav__item">item 4</div>
+                    <div class="nav__item">item 5</div>
+                    <div class="nav__item">item 6</div>
+                  </div>
+                </div>
+                <div class="nav__item _dropdown">
+                  Earn
+                  <div class="nav__item-dropdown">
+                    <div class="nav__item">item 7</div>
+                    <div class="nav__item">item 8</div>
+                    <div class="nav__item">item 9</div>
+                  </div>
+                </div>
+                <div class="nav__item _dropdown">
+                  Products
+                  <div class="nav__item-dropdown">
+                    <div class="nav__item">item 10</div>
+                    <div class="nav__item">item 11</div>
+                    <div class="nav__item">item 12</div>
+                  </div>
+                </div>
+                <div class="nav__item">Telegram</div>
+              </div>
             </div>
+
+            <button class="burger" id="menuBtn"></button>
           </div>
         </div>
       </header>
       <!-- header end -->
       <!-- section start -->
-      <section class="createNft">
+      <!-- section start -->
+      <section class="searchSection">
         <div class="autoContainer">
-          <div class="createNft__bg">
+          <div class="searchSection__bg">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="searchSection__bg-img">
+              <img src="assets/images/earth.png" alt="" />
+            </div>
+          </div>
+          <div class="searchSection__search">
+            <div class="input">
+              <input type="text" placeholder="Type your desired domain" />
+              <span class="input__shadow"></span>
+              <div class="input__helper">
+                <a href="#" class="textLink">.arb</a>
+                <span>/</span>
+                <a href="#" class="textLink">.bnb</a>
+                <span>/</span>
+                <a href="#" class="textLink">.eth</a>
+                <span>/</span>
+                <a href="#" class="textLink">.polygon</a>
+                <span>/</span>
+                <a href="#" class="textLink">.bitcoin</a>
+                <span>/</span>
+                <a href="#" class="textLink">.crypto</a>
+                <span>/</span>
+                <a href="#" class="textLink">.blockchain</a>
+                <span>/</span>
+                <a href="#" class="textLink">.wallet</a>
+                <span>/</span>
+                <a href="#" class="textLink">.nft</a>
+                <span>/</span>
+                <a href="#" class="textLink">.dao</a>
+              </div>
+            </div>
+
+            <button class="button button--primary button--shadow _lg">
+              <span>Search Domain</span>
+            </button>
+            <button class="button button--primary button--shadow _lg">
+              <span>AI Suggested Search</span>
+            </button>
+          </div>
+          <div class="searchSection__results">
+            <ul>
+              <li class="searchSection__results-item _header">
+                <span class="_ico">
+                  <img src="assets/images/icons/tick2.svg" alt="✔️" />
+                </span>
+                <div>Suggested Names</div>
+                <div>Price</div>
+                <div class="_action">Buy Now</div>
+                <div class="_action">NFT Conversion</div>
+              </li>
+              <li class="searchSection__results-item">
+                <span class="_ico">
+                  <img src="assets/images/icons/tick2.svg" alt="✔️" />
+                </span>
+                <div>
+                  <span class="_hidden">Suggested Names</span>
+                  <span>Smash22</span>
+                </div>
+                <div>
+                  <span class="_hidden">Price </span>
+                  <span>$5</span>
+                </div>
+                <div class="_action">
+                  <button class="button button--primary">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="_action">
+                  <button class="button button--primary">
+                    <span>Convert Domain to NFT</span>
+                  </button>
+                </div>
+              </li>
+              <li class="searchSection__results-item">
+                <span class="_ico">
+                  <img src="assets/images/icons/tick2.svg" alt="✔️" />
+                </span>
+                <div>
+                  <span class="_hidden">Suggested Names</span>
+                  <span>Smash23</span>
+                </div>
+                <div><span class="_hidden">Price </span><span>$5</span></div>
+                <div class="_action">
+                  <button class="button button--primary">
+                    <span>Add to Cart</span>
+                  </button>
+                </div>
+                <div class="_action">
+                  <button class="button button--primary">
+                    <span>Convert Domain to NFT</span>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- section end -->
+      <!-- section start -->
+      <section class="faqSection">
+        <div class="autoContainer">
+          <div class="faqSection__bg">
             <span></span>
             <span></span>
             <span></span>
           </div>
-          <div class="createNft__inner">
-            <div class="createNft__inner-content _center">
-              <h1 class="createNft__inner-content-title gradientTitle">
-                <span>Confirm Your Domain Details</span>
-              </h1>
-              <div class="createNft__inner-content-body">
-                <div class="createNft__actions">
-                  <div class="createNft__actions-info">
-                    <strong>Selected Domain Name: </strong>
-                    <span>Smash22.arb</span>
+          <div class="faqSection__inner">
+            <div class="faqSection__inner-title">
+              <h3><span>Frequent Questions</span></h3>
+            </div>
+            <div class="faqSection__inner-tabs">
+              <ul class="faqSection__inner-tabs-column">
+                <li class="faqSection__tab">
+                  <div class="faqSection__tab-header tabEvent">
+                    How do I buy stack pro?
+                    <span class="_ico"></span>
                   </div>
-                </div>
-              </div>
-              <div class="createNft__inner-content-footer">
-                <button class="button button--primary _xlg">
-                  <span>Continue to Buy</span>
-                </button>
-                <button class="button button--primary _xlg">
-                  <span>Convert Domain to NFT</span>
-                </button>
-              </div>
+                  <div class="faqSection__tab-body">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quod obcaecati nostrum laudantium magnam quas rerum,
+                    temporibus, sequi iure sunt iste id molestiae deserunt vel
+                    aliquam explicabo dolor adipisci voluptatem! Commodi.
+                  </div>
+                </li>
+                <li class="faqSection__tab">
+                  <div class="faqSection__tab-header tabEvent">
+                    How do I buy stack pro?
+                    <span class="_ico"></span>
+                  </div>
+                  <div class="faqSection__tab-body">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quod obcaecati nostrum laudantium magnam quas rerum,
+                    temporibus, sequi iure sunt iste id molestiae deserunt vel
+                    aliquam explicabo dolor adipisci voluptatem! Commodi.
+                  </div>
+                </li>
+                <li class="faqSection__tab">
+                  <div class="faqSection__tab-header tabEvent">
+                    How do I buy stack pro?
+                    <span class="_ico"></span>
+                  </div>
+                  <div class="faqSection__tab-body">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quod obcaecati nostrum laudantium magnam quas rerum,
+                    temporibus, sequi iure sunt iste id molestiae deserunt vel
+                    aliquam explicabo dolor adipisci voluptatem! Commodi.
+                  </div>
+                </li>
+                <li class="faqSection__tab">
+                  <div class="faqSection__tab-header tabEvent">
+                    How do I buy stack pro?
+                    <span class="_ico"></span>
+                  </div>
+                  <div class="faqSection__tab-body">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quod obcaecati nostrum laudantium magnam quas rerum,
+                    temporibus, sequi iure sunt iste id molestiae deserunt vel
+                    aliquam explicabo dolor adipisci voluptatem! Commodi.
+                  </div>
+                </li>
+                <li class="faqSection__tab">
+                  <div class="faqSection__tab-header tabEvent">
+                    How do I buy stack pro?
+                    <span class="_ico"></span>
+                  </div>
+                  <div class="faqSection__tab-body">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quod obcaecati nostrum laudantium magnam quas rerum,
+                    temporibus, sequi iure sunt iste id molestiae deserunt vel
+                    aliquam explicabo dolor adipisci voluptatem! Commodi.
+                  </div>
+                </li>
+              </ul>
+              <ul class="faqSection__inner-tabs-column">
+                <li class="faqSection__tab">
+                  <div class="faqSection__tab-header tabEvent">
+                    How do I buy stack pro?
+                    <span class="_ico"></span>
+                  </div>
+                  <div class="faqSection__tab-body">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quod obcaecati nostrum laudantium magnam quas rerum,
+                    temporibus, sequi iure sunt iste id molestiae deserunt vel
+                    aliquam explicabo dolor adipisci voluptatem! Commodi.
+                  </div>
+                </li>
+                <li class="faqSection__tab">
+                  <div class="faqSection__tab-header tabEvent">
+                    How do I buy stack pro?
+                    <span class="_ico"></span>
+                  </div>
+                  <div class="faqSection__tab-body">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quod obcaecati nostrum laudantium magnam quas rerum,
+                    temporibus, sequi iure sunt iste id molestiae deserunt vel
+                    aliquam explicabo dolor adipisci voluptatem! Commodi.
+                  </div>
+                </li>
+                <li class="faqSection__tab">
+                  <div class="faqSection__tab-header tabEvent">
+                    How do I buy stack pro?
+                    <span class="_ico"></span>
+                  </div>
+                  <div class="faqSection__tab-body">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quod obcaecati nostrum laudantium magnam quas rerum,
+                    temporibus, sequi iure sunt iste id molestiae deserunt vel
+                    aliquam explicabo dolor adipisci voluptatem! Commodi.
+                  </div>
+                </li>
+                <li class="faqSection__tab">
+                  <div class="faqSection__tab-header tabEvent">
+                    How do I buy stack pro?
+                    <span class="_ico"></span>
+                  </div>
+                  <div class="faqSection__tab-body">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quod obcaecati nostrum laudantium magnam quas rerum,
+                    temporibus, sequi iure sunt iste id molestiae deserunt vel
+                    aliquam explicabo dolor adipisci voluptatem! Commodi.
+                  </div>
+                </li>
+                <li class="faqSection__tab">
+                  <div class="faqSection__tab-header tabEvent">
+                    How do I buy stack pro?
+                    <span class="_ico"></span>
+                  </div>
+                  <div class="faqSection__tab-body">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quod obcaecati nostrum laudantium magnam quas rerum,
+                    temporibus, sequi iure sunt iste id molestiae deserunt vel
+                    aliquam explicabo dolor adipisci voluptatem! Commodi.
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
       <!-- section end -->
-
       <!-- footer end -->
-      <footer class="footerSection _sm">
+      <footer class="footerSection">
         <div class="autoContainer">
           <div class="footerSection__bg">
             <div class="footerSection__bg-img">
@@ -101,6 +350,7 @@
       </footer>
       <!-- footer end -->
       <script src="assets/js/menu.js"></script>
+      <script src="assets/js/tabs.js"></script>
     </div>
   </body>
 </html>
