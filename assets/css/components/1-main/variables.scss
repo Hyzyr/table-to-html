@@ -29,6 +29,11 @@ $gradient-secondary-reverse: linear-gradient(
   rgba(81, 18, 129, 0),
   #511281
 );
+$gradient-green: linear-gradient(
+  45deg,
+  $green,
+  mix($green, $black, 60%),
+);
 $gradient-secondary: linear-gradient(
   45deg,
   #511281 0%,

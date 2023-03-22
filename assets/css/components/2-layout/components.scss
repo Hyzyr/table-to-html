@@ -196,6 +196,11 @@
         }
       }
     }
+    &.color--green {
+      span {
+        background: $gradient-green;
+      }
+    }
   }
   &--shadow {
     box-shadow: 0 5px 50px 5px rgba($black-bg, 0.1);
@@ -231,6 +236,7 @@
     }
     // bac
   }
+
   &._select {
     position: relative;
     min-width: 210px;

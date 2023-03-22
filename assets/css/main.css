@@ -349,6 +349,9 @@ body.active {
 .button--primary._xlg:hover:before {
   opacity: 1;
 }
+.button--primary.color--green span {
+  background: linear-gradient(45deg, #00a58c, #076a5b);
+}
 .button--shadow {
   -webkit-box-shadow: 0 5px 50px 5px rgba(17, 1, 30, 0.1);
           box-shadow: 0 5px 50px 5px rgba(17, 1, 30, 0.1);
